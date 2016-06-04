@@ -14,6 +14,7 @@ class TabBarController: UITabBarController {
         super.viewDidLoad()
         
         
+        
         addCustomNavigationController(ToolsViewController(), title: "首页", imgName: "tabbar_home")
         
         addCustomNavigationController(ToolsViewController(), title: "新闻", imgName:"tabbar_home")
@@ -28,6 +29,9 @@ class TabBarController: UITabBarController {
 
     
     func addCustomNavigationController(navVc:UIViewController,title:String,imgName:String){
+        
+        
+        navVc.view.backgroundColor = RGBA(0, G: 122, B: 255, A: 1)
         
         navVc.title = title
         

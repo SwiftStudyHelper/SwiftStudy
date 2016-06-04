@@ -13,6 +13,7 @@
 		B65AD6271D027348006F3C81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B65AD6251D027348006F3C81 /* LaunchScreen.storyboard */; };
 		B65AD6321D0289DF006F3C81 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65AD6311D0289DF006F3C81 /* TabBarController.swift */; };
 		B65AD6361D02A442006F3C81 /* ToolsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65AD6351D02A442006F3C81 /* ToolsViewController.swift */; };
+		B65AD6391D02AC3E006F3C81 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65AD6381D02AC3E006F3C81 /* File.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,8 +24,8 @@
 		B65AD6261D027348006F3C81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B65AD6281D027348006F3C81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B65AD6311D0289DF006F3C81 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
-		B65AD6331D029282006F3C81 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		B65AD6351D02A442006F3C81 /* ToolsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolsViewController.swift; sourceTree = "<group>"; };
+		B65AD6381D02AC3E006F3C81 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +72,8 @@
 		B65AD62F1D028966006F3C81 /* RootFiles(框架) */ = {
 			isa = PBXGroup;
 			children = (
+				B65AD6381D02AC3E006F3C81 /* File.swift */,
 				B65AD6301D028990006F3C81 /* Controller */,
-				B65AD6331D029282006F3C81 /* PrefixHeader.pch */,
 			);
 			path = "RootFiles(框架)";
 			sourceTree = "<group>";
@@ -165,6 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B65AD6361D02A442006F3C81 /* ToolsViewController.swift in Sources */,
+				B65AD6391D02AC3E006F3C81 /* File.swift in Sources */,
 				B65AD6321D0289DF006F3C81 /* TabBarController.swift in Sources */,
 				B65AD61D1D027348006F3C81 /* AppDelegate.swift in Sources */,
 			);
@@ -282,7 +284,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = L2Cplat.SwiftStudy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "/Users/liyang/Desktop/SwiftStudy/SwiftStudy/RootFiles(框架)/PrefixHeader.pch";
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "";
 			};
 			name = Debug;
 		};
@@ -295,7 +297,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = L2Cplat.SwiftStudy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/liyang/Desktop/SwiftStudy/SwiftStudy/RootFiles(框架)/PrefixHeader.pch";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};
