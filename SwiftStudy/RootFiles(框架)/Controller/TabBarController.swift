@@ -13,11 +13,9 @@ class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        addCustomNavigationController(ToolsViewController(), title: "娱乐", imgName: "tabbar_home")
         
-        
-        addCustomNavigationController(ToolsViewController(), title: "首页", imgName: "tabbar_home")
-        
-        addCustomNavigationController(ToolsViewController(), title: "新闻", imgName:"tabbar_home")
+        addCustomNavigationController(ToolsViewController(), title: "生活", imgName:"tabbar_home")
         
         addCustomNavigationController(ToolsViewController(), title: "医疗", imgName: "tabbar_home")
         
@@ -29,10 +27,7 @@ class TabBarController: UITabBarController {
 
     
     func addCustomNavigationController(navVc:UIViewController,title:String,imgName:String){
-        
-        
-        navVc.view.backgroundColor = RGBA(0, G: 122, B: 255, A: 1)
-        
+
         navVc.title = title
         
         navVc.tabBarItem.image = UIImage(named: imgName)
@@ -40,6 +35,8 @@ class TabBarController: UITabBarController {
         navVc.tabBarItem.selectedImage = UIImage(named: imgName+"_highlighted")
         
         let naviController = UINavigationController(rootViewController: navVc)
+        
+        naviController.navigationBar.translucent = false;
         
         addChildViewController(naviController)
         
