@@ -32,7 +32,9 @@ class TabBarController: UITabBarController {
         
         navVc.tabBarItem.image = UIImage(named: imgName)
         
-        navVc.tabBarItem.selectedImage = UIImage(named: imgName+"_highlighted")
+        navVc.tabBarItem.selectedImage = UIImage(named: imgName+"_selected")
+        
+        self.tabBar.tintColor = UIColor .orangeColor()
         
         let naviController = UINavigationController(rootViewController: navVc)
         
