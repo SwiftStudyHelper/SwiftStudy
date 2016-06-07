@@ -1,0 +1,15 @@
+PODS:
+  - Alamofire (3.4.0)
+  - RATreeView (2.1.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 3.4)
+  - RATreeView (~> 2.1.0)
+
+SPEC CHECKSUMS:
+  Alamofire: c19a627cefd6a95f840401c49ab1f124e07f54ee
+  RATreeView: fc82ec26b8be18cfa0f5f99a5abbe6be68edb21f
+
+PODFILE CHECKSUM: c10b5eef1a4bdb3c690cae41b90b4449e2f4511b
+
+COCOAPODS: 1.0.1
