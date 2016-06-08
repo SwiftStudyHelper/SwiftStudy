@@ -13,13 +13,13 @@ class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        addCustomNavigationController(ToolsViewController(), title: "娱乐", imgName: "tabbar_home")
+        addCustomNavigationController(ZBHomePageViewController(), title: "周斌", imgName: "tabbar_home")
         
-        addCustomNavigationController(ToolsViewController(), title: "生活", imgName:"tabbar_home")
+        addCustomNavigationController(LYHomePageViewController(), title: "李阳", imgName:"tabbar_home")
         
-        addCustomNavigationController(ToolsViewController(), title: "医疗", imgName: "tabbar_home")
+        addCustomNavigationController(TXHomePageViewController(), title: "田鑫", imgName: "tabbar_home")
         
-        addCustomNavigationController(ToolsViewController(), title: "工具", imgName:"tabbar_home")
+        addCustomNavigationController(ZKQHomePageViewController(), title: "朱凯奇", imgName:"tabbar_home")
         
         // Do any additional setup after loading the view.
     }

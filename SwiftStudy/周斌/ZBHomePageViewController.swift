@@ -1,23 +1,19 @@
 //
-//  ToolsViewController.swift
+//  ZBHomePageViewController.swift
 //  SwiftStudy
 //
-//  Created by liyang@l2cplat.com on 16/6/4.
+//  Created by liyang@l2cplat.com on 16/6/8.
 //  Copyright © 2016年 yang_li828@163.com. All rights reserved.
 //
 
 import UIKit
 
-class ToolsViewController: UITabBarController {
+class ZBHomePageViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        
-        // 添加tabitem
-        
-        
+        self.view.backgroundColor = UIColor.cyanColor()
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
