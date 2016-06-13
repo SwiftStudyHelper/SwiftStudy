@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (3.4.0)
+  - Refresher (0.5.0)
   - SDWebImage (3.7.6):
     - SDWebImage/Core (= 3.7.6)
   - SDWebImage/Core (3.7.6)
@@ -7,14 +8,16 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 3.4)
+  - Refresher
   - SDWebImage (~> 3.7.6)
   - SwiftyJSON (~> 2.3.2)
 
 SPEC CHECKSUMS:
   Alamofire: c19a627cefd6a95f840401c49ab1f124e07f54ee
+  Refresher: 485f5990e6315add7f3470db5a4ca106451b11d3
   SDWebImage: c325cf02c30337336b95beff20a13df489ec0ec9
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
-PODFILE CHECKSUM: ab027bd87c1e0b150ce1133029e0d52a1e87eca8
+PODFILE CHECKSUM: e3552868a3b9023015c003319de8c1822e20ff67
 
 COCOAPODS: 1.0.1
