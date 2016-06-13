@@ -20,7 +20,7 @@ class AMFHelper: NSObject {
      - parameter success:    请求成功回调
      - parameter faliure:    请求失败回调
      */
-    class func get(url:String, parameters:[String: AnyObject]?, success:(responseObject:AnyObject?)->Void,faliure:(error:NSError?)->Void) -> Void{
+    class func get(url:String, parameters:[String: AnyObject]?,success:(responseObject:AnyObject?)->Void,faliure:(error:NSError?)->Void) -> Void{
         
         Alamofire.request(.GET, url, parameters:parameters).responseJSON { (response) in
             
@@ -36,7 +36,37 @@ class AMFHelper: NSObject {
             }
         }
         
+       
+        
      }
+    
+    /**
+     BaiduGet
+     
+     - parameter url:        请求url
+     - parameter parameters: 请求参数
+     - parameter success:    请求成功回调
+     - parameter faliure:    请求失败回调
+     */
+    class func BaiduGet(url:String, parameters:[String: AnyObject]?,success:(responseObject:AnyObject?)->Void,faliure:(error:NSError?)->Void) -> Void{
+        
+        Alamofire.request(.GET, url, parameters:parameters,headers: ["apikey":BAIDUAPIKEY]).responseJSON { (response) in
+            
+            if response.result.value != nil {
+                
+                success(responseObject:response.result.value)
+                
+            }
+            else {
+                
+                faliure(error: response.result.error)
+                
+            }
+        }
+        
+        
+        
+    }
     
     
     /**
@@ -50,6 +80,32 @@ class AMFHelper: NSObject {
     class func post(url:String, parameters:[String: AnyObject]?, success:(responseObject:AnyObject?)->Void,faliure:(error:NSError?)->Void) -> Void{
         
         Alamofire.request(.POST, url, parameters:parameters).responseJSON { (response) in
+            
+            if response.result.value != nil {
+                
+                success(responseObject:response.result.value)
+                
+            }
+            else {
+                
+                faliure(error: response.result.error)
+                
+            }
+        }
+        
+    }
+    
+    /**
+     BaiduPost请求
+     
+     - parameter url:        请求url
+     - parameter parameters: 请求参数
+     - parameter success:    请求成功回调
+     - parameter faliure:    请求失败回调
+     */
+    class func BaiduPost(url:String, parameters:[String: AnyObject]?, success:(responseObject:AnyObject?)->Void,faliure:(error:NSError?)->Void) -> Void{
+        
+        Alamofire.request(.POST, url, parameters:parameters,headers:["apikey":BAIDUAPIKEY]).responseJSON { (response) in
             
             if response.result.value != nil {
                 
@@ -85,6 +141,8 @@ class AMFHelper: NSObject {
         }.response { (_,_,_,error) in
               faliure(error: error)
         }
+        
+        
         
     }
     
