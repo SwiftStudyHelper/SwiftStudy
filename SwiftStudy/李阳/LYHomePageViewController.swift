@@ -14,9 +14,24 @@ class LYHomePageViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.yellowColor()
         
-        let url = "http://apis.baidu.com/songshuxiansheng/news/news"
-        let httpArg = ""
-        request(url, httpArg: httpArg)
+        
+//        var dic = NSMutableDictionary()
+//        
+//        dic .setValue("popular", forKey: "id")
+//        
+//        dic.setValue("1", forKey: "page")
+        
+        let dic = ["id":"popular","page":"1"]
+        
+        AMFHelper .BaiduGet(baiduNewsTouTiaoUrl, parameters: dic, success: { (responseObject) in
+            
+            print(responseObject)
+            
+            }) { (error) in
+                
+                print(error)
+                
+        }
         // Do any additional setup after loading the view.
         
     }
@@ -24,25 +39,7 @@ class LYHomePageViewController: UIViewController {
 
         
 
-    func request(httpUrl: String, httpArg: String) {
-            let req = NSMutableURLRequest(URL: NSURL(string: httpUrl + "?" + httpArg)!)
-            req.timeoutInterval = 6
-            req.HTTPMethod = "GET"
-            req.addValue(BAIDUAPIKEY, forHTTPHeaderField: "apikey")
-            NSURLConnection.sendAsynchronousRequest(req, queue: NSOperationQueue.mainQueue()) {
-                (response, data, error) -> Void in
-//                let res = response as! NSHTTPURLResponse
-//                print(res.statusCode)
-                if let e = error{
-                    print("请求失败")
-                }
-                if let d = data {
-                    var content = NSString(data: d, encoding: NSUTF8StringEncoding)
-                    print(content)
-                }
-            }
-        }
-
+   
 
 
 }
