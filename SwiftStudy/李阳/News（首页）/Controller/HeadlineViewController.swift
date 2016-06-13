@@ -10,15 +10,23 @@ import UIKit
 
 import SwiftyJSON
 
+protocol HeadlineViewControllerDelegate:NSObjectProtocol {
+    
+    func clickTheCellWithIndexPath(url:String)
+    
+}
 
 
 class HeadlineViewController: UIViewController{
     
     var dataSource:Array<HLModel> = []
     
+    var HeadlineTableView:UITableView?
     
-    var HeadlineTableView:UITableView!
     var page:Int = 1
+    
+    weak var delegate: HeadlineViewControllerDelegate?
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,11 +40,13 @@ class HeadlineViewController: UIViewController{
         
         self.HeadlineTableView = UITableView(frame:CGRectMake(0, 0, SCREEN_W, SCREEN_H-Navi_H-Bar_H))
         
-        HeadlineTableView.delegate = self
+        self.HeadlineTableView?.backgroundView?.backgroundColor = UIColor.purpleColor()
         
-        HeadlineTableView.dataSource  = self
+        self.HeadlineTableView!.delegate = self
         
-//        HeadlineTableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "UITableView")
+        self.HeadlineTableView!.dataSource  = self
+        
+        self.HeadlineTableView!.registerNib(UINib(nibName: "NewsCommTableViewCell",bundle: nil), forCellReuseIdentifier: "NewsCommTableViewCell")
         
     }
     
@@ -64,7 +74,7 @@ class HeadlineViewController: UIViewController{
             
             dispatch_async(dispatch_get_main_queue(), { 
                 
-                self.HeadlineTableView.reloadData()
+                self.HeadlineTableView!.reloadData()
             })
             
             }) { (error) in
@@ -76,12 +86,12 @@ class HeadlineViewController: UIViewController{
     
 
 
-    
+   
 }
 
 
 
-extension HeadlineViewController:UITableViewDataSource,UITableViewDelegate
+extension HeadlineViewController:UITableViewDelegate,UITableViewDataSource
 {
     //MARK:-tableView代理方法
     
@@ -92,14 +102,25 @@ extension HeadlineViewController:UITableViewDataSource,UITableViewDelegate
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCellWithIdentifier("UITableView")
+        let cell = tableView.dequeueReusableCellWithIdentifier("NewsCommTableViewCell") as! NewsCommTableViewCell
         
-        cell!.textLabel?.text = "dkjkdajkjdjafljdkfdakj"
+        cell.refreshCellWithModel(self.dataSource[indexPath.row])
         
-        return cell!
+        return cell
     }
-    
-    
-    
+
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat
+    {
+        
+        return 80
+    }
+
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+    {
+        tableView.deselectRowAtIndexPath(indexPath, animated: false)
+        
+        self.delegate?.clickTheCellWithIndexPath(self.dataSource[indexPath.row].url!)
+    }
+
     
 }

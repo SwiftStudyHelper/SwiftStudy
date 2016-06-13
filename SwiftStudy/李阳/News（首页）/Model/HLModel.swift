@@ -21,5 +21,7 @@ class HLModel: NSObject {
     var time:Int = 0
     
     
-
+    override func setValue(value: AnyObject?, forUndefinedKey key: String) {
+        
+    }
 }

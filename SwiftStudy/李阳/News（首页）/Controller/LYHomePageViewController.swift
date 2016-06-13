@@ -10,7 +10,7 @@ import UIKit
 
 class LYHomePageViewController: UIViewController{
     
-    var headlineVc:UITableView?
+    var headLineController:HeadlineViewController = HeadlineViewController()
     
     var barView:NaviBarView? = NaviBarView()
     
@@ -46,17 +46,15 @@ class LYHomePageViewController: UIViewController{
         
         self.view.addSubview(newsScrollView!)
         
-        //添加tableView
+        //添加controller
         
-        let vc =  HeadlineViewController()
+        self.headLineController.CreatUI()
         
-        vc.CreatUI()
+        self.headLineController.getDataFromNetWork()
         
-        headlineVc = vc.HeadlineTableView
+        self.headLineController.delegate = self
         
-        vc.getDataFromNetWork()
-        
-        newsScrollView?.addSubview(headlineVc!)
+        newsScrollView?.addSubview( self.headLineController.HeadlineTableView!)
         
         
     }
@@ -90,3 +88,23 @@ extension LYHomePageViewController:UIScrollViewDelegate {
 
 
 }
+
+
+extension LYHomePageViewController:HeadlineViewControllerDelegate{
+    
+    func clickTheCellWithIndexPath(url:String)
+    {
+        let vc = NewsWebViewController()
+        
+        vc.hidesBottomBarWhenPushed = true
+        
+        vc.url = url
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+    }
+
+    
+}
+
+

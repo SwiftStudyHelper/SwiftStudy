@@ -25,6 +25,9 @@
 		B69B2E441D07A43F00FF4DA0 /* ZKQHomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69B2E431D07A43F00FF4DA0 /* ZKQHomePageViewController.swift */; };
 		B69B2E4A1D07A47400FF4DA0 /* ZBHomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69B2E491D07A47400FF4DA0 /* ZBHomePageViewController.swift */; };
 		B6C8CD561D0E9CAA00D41900 /* HLModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C8CD551D0E9CAA00D41900 /* HLModel.swift */; };
+		B6C8CD591D0EAF0C00D41900 /* NewsCommTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C8CD571D0EAF0C00D41900 /* NewsCommTableViewCell.swift */; };
+		B6C8CD5A1D0EAF0C00D41900 /* NewsCommTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6C8CD581D0EAF0C00D41900 /* NewsCommTableViewCell.xib */; };
+		B6C8CD5D1D0EB72600D41900 /* NewsWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C8CD5C1D0EB72600D41900 /* NewsWebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +52,9 @@
 		B69B2E431D07A43F00FF4DA0 /* ZKQHomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZKQHomePageViewController.swift; sourceTree = "<group>"; };
 		B69B2E491D07A47400FF4DA0 /* ZBHomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZBHomePageViewController.swift; sourceTree = "<group>"; };
 		B6C8CD551D0E9CAA00D41900 /* HLModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HLModel.swift; sourceTree = "<group>"; };
+		B6C8CD571D0EAF0C00D41900 /* NewsCommTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsCommTableViewCell.swift; sourceTree = "<group>"; };
+		B6C8CD581D0EAF0C00D41900 /* NewsCommTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsCommTableViewCell.xib; sourceTree = "<group>"; };
+		B6C8CD5C1D0EB72600D41900 /* NewsWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsWebViewController.swift; sourceTree = "<group>"; };
 		C27921668CE9B2F1E8884A48 /* Pods-SwiftStudy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftStudy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftStudy/Pods-SwiftStudy.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -134,6 +140,8 @@
 			isa = PBXGroup;
 			children = (
 				B62665DE1D0E6713002C7176 /* NaviBarView.swift */,
+				B6C8CD571D0EAF0C00D41900 /* NewsCommTableViewCell.swift */,
+				B6C8CD581D0EAF0C00D41900 /* NewsCommTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -204,6 +212,7 @@
 		B69B2E401D07A3C600FF4DA0 /* 李阳 */ = {
 			isa = PBXGroup;
 			children = (
+				B6C8CD5B1D0EB70400D41900 /* webViewController(通用新闻详情) */,
 				B62665D91D0E6713002C7176 /* News（首页） */,
 			);
 			path = "李阳";
@@ -226,6 +235,14 @@
 				B69B2E431D07A43F00FF4DA0 /* ZKQHomePageViewController.swift */,
 			);
 			path = "朱凯奇";
+			sourceTree = "<group>";
+		};
+		B6C8CD5B1D0EB70400D41900 /* webViewController(通用新闻详情) */ = {
+			isa = PBXGroup;
+			children = (
+				B6C8CD5C1D0EB72600D41900 /* NewsWebViewController.swift */,
+			);
+			path = "webViewController(通用新闻详情)";
 			sourceTree = "<group>";
 		};
 		D62B055CF3675F10E0636000 /* Frameworks */ = {
@@ -301,6 +318,7 @@
 				B65AD6241D027348006F3C81 /* Assets.xcassets in Resources */,
 				2A062D421D0EA0B70098FF87 /* jiankang.jpg in Resources */,
 				B65AD6221D027348006F3C81 /* Main.storyboard in Resources */,
+				B6C8CD5A1D0EAF0C00D41900 /* NewsCommTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,6 +379,7 @@
 			files = (
 				B62665E61D0E8D04002C7176 /* HeadlineViewController.swift in Sources */,
 				B65AD6391D02AC3E006F3C81 /* File.swift in Sources */,
+				B6C8CD5D1D0EB72600D41900 /* NewsWebViewController.swift in Sources */,
 				B69B2E4A1D07A47400FF4DA0 /* ZBHomePageViewController.swift in Sources */,
 				733F52981D0E9BC5006F9669 /* TXHomePageViewController.swift in Sources */,
 				B62665CE1D0E4440002C7176 /* URLFile.swift in Sources */,
@@ -371,6 +390,7 @@
 				739A8E9C1D07F21100CA9E04 /* AMFHelper.swift in Sources */,
 				B62665E01D0E6713002C7176 /* NaviBarView.swift in Sources */,
 				B6C8CD561D0E9CAA00D41900 /* HLModel.swift in Sources */,
+				B6C8CD591D0EAF0C00D41900 /* NewsCommTableViewCell.swift in Sources */,
 				B62665DF1D0E6713002C7176 /* LYHomePageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
