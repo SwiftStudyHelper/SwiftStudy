@@ -15,6 +15,8 @@ let SCREEN_H = UIScreen.mainScreen().bounds.height
 
 let iOS_VERSION = (UIDevice.currentDevice().systemVersion as NSString).doubleValue
 
+let BAIDUAPIKEY = "38e9683d1699b83d2145e6d55a140da7"
+
 func RGBA(R:CGFloat,G:CGFloat,B:CGFloat,A:CGFloat)->UIColor{
     
     return UIColor(red: R/255.0, green: G/255.0, blue: B/255.0, alpha:A)
