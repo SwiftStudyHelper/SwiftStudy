@@ -23,4 +23,9 @@ func RGBA(R:CGFloat,G:CGFloat,B:CGFloat,A:CGFloat)->UIColor{
 
 }
 
+func FRAME(x:CGFloat,y: CGFloat,width: CGFloat,height: CGFloat) -> CGRect {
+    
+    return CGRect(x:x ,y:y ,width:width ,height:height)
+    
+}
 
