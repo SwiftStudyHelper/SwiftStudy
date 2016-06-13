@@ -28,7 +28,7 @@ class LYHomePageViewController: UIViewController {
             let req = NSMutableURLRequest(URL: NSURL(string: httpUrl + "?" + httpArg)!)
             req.timeoutInterval = 6
             req.HTTPMethod = "GET"
-            req.addValue(APIKEY, forHTTPHeaderField: "apikey")
+            req.addValue(BAIDUAPIKEY, forHTTPHeaderField: "apikey")
             NSURLConnection.sendAsynchronousRequest(req, queue: NSOperationQueue.mainQueue()) {
                 (response, data, error) -> Void in
 //                let res = response as! NSHTTPURLResponse
