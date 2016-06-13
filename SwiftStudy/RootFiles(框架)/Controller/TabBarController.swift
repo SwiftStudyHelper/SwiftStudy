@@ -13,6 +13,7 @@ class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.tabBar.translucent = false
         
         addCustomNavigationController(LYHomePageViewController(), title: "李阳", imgName:"tabbar_home")
         
