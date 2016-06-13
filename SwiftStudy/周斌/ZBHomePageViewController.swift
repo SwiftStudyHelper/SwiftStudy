@@ -12,24 +12,25 @@ class ZBHomePageViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.cyanColor()
-        // Do any additional setup after loading the view.
+        
+        self.navigationItem.title = "日常生活"
+        
+        creatUI()
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+    func creatUI(){
+        
+        let image = UIImage (named: "jiankang.jpg")
+        
+        let imageView = UIImageView.init(frame: CGRectMake(0, 0, SCREEN_W, 150))
+        
+        var vImg = UIImageView(image: image);
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        self.view .addSubview(vImg)
+                
+        
     }
-    */
+
 
 }
