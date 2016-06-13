@@ -10,6 +10,8 @@ import UIKit
 import SwiftyJSON
 class ZKQHomePageViewController: UIViewController {
 
+    var modelArray:Array<Model>?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -17,10 +19,23 @@ class ZKQHomePageViewController: UIViewController {
         
         let dic = ["id":"popular","page":"1"]
         
+        
+        self.modelArray = Array()
+        
         AMFHelper .BaiduGet(baiduNewsTouTiaoUrl, parameters: dic, success: { (responseObject) in
          
             let json = JSON(responseObject)
-            print(json["data"]["article"].array!)
+
+            for  dict  in json["data"]["article"].array! {
+                
+               
+               let model = Model()
+                
+                model.setValuesForKeysWithDictionary(dict.dictionaryObject!)
+                
+                self.modelArray?.append(model)
+                
+            }
             
         }) { (error) in
             
@@ -28,6 +43,7 @@ class ZKQHomePageViewController: UIViewController {
             
         }
         
+       
         
         // Do any additional setup after loading the view.
     }
