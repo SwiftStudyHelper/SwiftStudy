@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		733F52981D0E9BC5006F9669 /* TXHomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733F52971D0E9BC5006F9669 /* TXHomePageViewController.swift */; };
 		7382EFC01D0E53AC0090B268 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7382EFBF1D0E53AC0090B268 /* Model.swift */; };
 		739A8E9C1D07F21100CA9E04 /* AMFHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739A8E9B1D07F21100CA9E04 /* AMFHelper.swift */; };
 		B05CBD730A03FECFB7064A12 /* Pods_SwiftStudy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D261BD0D0E90B7BAD2016C3 /* Pods_SwiftStudy.framework */; };
@@ -20,13 +21,13 @@
 		B65AD6321D0289DF006F3C81 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65AD6311D0289DF006F3C81 /* TabBarController.swift */; };
 		B65AD6391D02AC3E006F3C81 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65AD6381D02AC3E006F3C81 /* File.swift */; };
 		B69B2E441D07A43F00FF4DA0 /* ZKQHomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69B2E431D07A43F00FF4DA0 /* ZKQHomePageViewController.swift */; };
-		B69B2E461D07A45300FF4DA0 /* TXHomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69B2E451D07A45300FF4DA0 /* TXHomePageViewController.swift */; };
 		B69B2E4A1D07A47400FF4DA0 /* ZBHomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69B2E491D07A47400FF4DA0 /* ZBHomePageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		047A81D83A29E629A315B16E /* Pods-SwiftStudy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftStudy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftStudy/Pods-SwiftStudy.debug.xcconfig"; sourceTree = "<group>"; };
 		5D261BD0D0E90B7BAD2016C3 /* Pods_SwiftStudy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftStudy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		733F52971D0E9BC5006F9669 /* TXHomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TXHomePageViewController.swift; sourceTree = "<group>"; };
 		7382EFBF1D0E53AC0090B268 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		739A8E9B1D07F21100CA9E04 /* AMFHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AMFHelper.swift; sourceTree = "<group>"; };
 		B62665CD1D0E4440002C7176 /* URLFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLFile.swift; sourceTree = "<group>"; };
@@ -41,7 +42,6 @@
 		B65AD6311D0289DF006F3C81 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		B65AD6381D02AC3E006F3C81 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		B69B2E431D07A43F00FF4DA0 /* ZKQHomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZKQHomePageViewController.swift; sourceTree = "<group>"; };
-		B69B2E451D07A45300FF4DA0 /* TXHomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TXHomePageViewController.swift; sourceTree = "<group>"; };
 		B69B2E491D07A47400FF4DA0 /* ZBHomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZBHomePageViewController.swift; sourceTree = "<group>"; };
 		F722DCCFC94ECA812EB98A16 /* Pods-SwiftStudy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftStudy.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftStudy/Pods-SwiftStudy.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,6 +65,28 @@
 				F722DCCFC94ECA812EB98A16 /* Pods-SwiftStudy.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		733F52941D0E9BB8006F9669 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		733F52951D0E9BBF006F9669 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		733F52961D0E9BC5006F9669 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				733F52971D0E9BC5006F9669 /* TXHomePageViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		7382EFBE1D0E53900090B268 /* Model */ = {
@@ -189,7 +211,9 @@
 		B69B2E411D07A3D300FF4DA0 /* 田鑫 */ = {
 			isa = PBXGroup;
 			children = (
-				B69B2E451D07A45300FF4DA0 /* TXHomePageViewController.swift */,
+				733F52961D0E9BC5006F9669 /* Controller */,
+				733F52951D0E9BBF006F9669 /* Model */,
+				733F52941D0E9BB8006F9669 /* View */,
 			);
 			path = "田鑫";
 			sourceTree = "<group>";
@@ -343,7 +367,7 @@
 			files = (
 				B65AD6391D02AC3E006F3C81 /* File.swift in Sources */,
 				B69B2E4A1D07A47400FF4DA0 /* ZBHomePageViewController.swift in Sources */,
-				B69B2E461D07A45300FF4DA0 /* TXHomePageViewController.swift in Sources */,
+				733F52981D0E9BC5006F9669 /* TXHomePageViewController.swift in Sources */,
 				B62665CE1D0E4440002C7176 /* URLFile.swift in Sources */,
 				B69B2E441D07A43F00FF4DA0 /* ZKQHomePageViewController.swift in Sources */,
 				7382EFC01D0E53AC0090B268 /* Model.swift in Sources */,
