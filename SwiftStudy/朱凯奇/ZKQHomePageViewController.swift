@@ -7,13 +7,26 @@
 //
 
 import UIKit
-
+import SwiftyJSON
 class ZKQHomePageViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.view.backgroundColor = UIColor.orangeColor()
+        
+        let dic = ["id":"popular","page":"1"]
+        
+        AMFHelper .BaiduGet(baiduNewsTouTiaoUrl, parameters: dic, success: { (responseObject) in
+         
+            let json = JSON(responseObject)
+            print(json["data"]["article"].array!)
+            
+        }) { (error) in
+            
+            print(error)
+            
+        }
         
         
         // Do any additional setup after loading the view.

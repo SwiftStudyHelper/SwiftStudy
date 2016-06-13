@@ -20,13 +20,13 @@ class AMFHelper: NSObject {
      - parameter success:    请求成功回调
      - parameter faliure:    请求失败回调
      */
-    class func get(url:String, parameters:[String: AnyObject]?,success:(responseObject:AnyObject?)->Void,faliure:(error:NSError?)->Void) -> Void{
+    class func get(url:String, parameters:[String: AnyObject]?,success:(responseObject:AnyObject!)->Void,faliure:(error:NSError?)->Void) -> Void{
         
         Alamofire.request(.GET, url, parameters:parameters).responseJSON { (response) in
             
             if response.result.value != nil {
             
-                success(responseObject:response.result.value)
+                success(responseObject:response.result.value!)
             
             }
             else {
@@ -48,7 +48,7 @@ class AMFHelper: NSObject {
      - parameter success:    请求成功回调
      - parameter faliure:    请求失败回调
      */
-    class func BaiduGet(url:String, parameters:[String: AnyObject]?,success:(responseObject:AnyObject?)->Void,faliure:(error:NSError?)->Void) -> Void{
+    class func BaiduGet(url:String, parameters:[String: AnyObject]?,success:(responseObject:AnyObject!)->Void,faliure:(error:NSError?)->Void) -> Void{
         
         Alamofire.request(.GET, url, parameters:parameters,headers: ["apikey":BAIDUAPIKEY]).responseJSON { (response) in
             
@@ -77,7 +77,7 @@ class AMFHelper: NSObject {
      - parameter success:    请求成功回调
      - parameter faliure:    请求失败回调
      */
-    class func post(url:String, parameters:[String: AnyObject]?, success:(responseObject:AnyObject?)->Void,faliure:(error:NSError?)->Void) -> Void{
+    class func post(url:String, parameters:[String: AnyObject]?, success:(responseObject:AnyObject!)->Void,faliure:(error:NSError?)->Void) -> Void{
         
         Alamofire.request(.POST, url, parameters:parameters).responseJSON { (response) in
             
@@ -103,7 +103,7 @@ class AMFHelper: NSObject {
      - parameter success:    请求成功回调
      - parameter faliure:    请求失败回调
      */
-    class func BaiduPost(url:String, parameters:[String: AnyObject]?, success:(responseObject:AnyObject?)->Void,faliure:(error:NSError?)->Void) -> Void{
+    class func BaiduPost(url:String, parameters:[String: AnyObject]?, success:(responseObject:AnyObject!)->Void,faliure:(error:NSError?)->Void) -> Void{
         
         Alamofire.request(.POST, url, parameters:parameters,headers:["apikey":BAIDUAPIKEY]).responseJSON { (response) in
             
