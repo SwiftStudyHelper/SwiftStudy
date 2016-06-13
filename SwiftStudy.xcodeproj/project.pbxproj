@@ -23,6 +23,7 @@
 		B69B2E441D07A43F00FF4DA0 /* ZKQHomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69B2E431D07A43F00FF4DA0 /* ZKQHomePageViewController.swift */; };
 		B69B2E461D07A45300FF4DA0 /* TXHomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69B2E451D07A45300FF4DA0 /* TXHomePageViewController.swift */; };
 		B69B2E4A1D07A47400FF4DA0 /* ZBHomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69B2E491D07A47400FF4DA0 /* ZBHomePageViewController.swift */; };
+		B6C8CD561D0E9CAA00D41900 /* HLModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C8CD551D0E9CAA00D41900 /* HLModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		B69B2E431D07A43F00FF4DA0 /* ZKQHomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZKQHomePageViewController.swift; sourceTree = "<group>"; };
 		B69B2E451D07A45300FF4DA0 /* TXHomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TXHomePageViewController.swift; sourceTree = "<group>"; };
 		B69B2E491D07A47400FF4DA0 /* ZBHomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZBHomePageViewController.swift; sourceTree = "<group>"; };
+		B6C8CD551D0E9CAA00D41900 /* HLModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HLModel.swift; sourceTree = "<group>"; };
 		C27921668CE9B2F1E8884A48 /* Pods-SwiftStudy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftStudy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftStudy/Pods-SwiftStudy.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,6 +101,7 @@
 		B62665DC1D0E6713002C7176 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B6C8CD551D0E9CAA00D41900 /* HLModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 				B65AD61D1D027348006F3C81 /* AppDelegate.swift in Sources */,
 				739A8E9C1D07F21100CA9E04 /* AMFHelper.swift in Sources */,
 				B62665E01D0E6713002C7176 /* NaviBarView.swift in Sources */,
+				B6C8CD561D0E9CAA00D41900 /* HLModel.swift in Sources */,
 				B62665DF1D0E6713002C7176 /* LYHomePageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,30 +8,35 @@
 
 import UIKit
 
-class HeadlineViewController: UIViewController ,UITableViewDelegate,UITableViewDataSource{
+import SwiftyJSON
+
+
+
+class HeadlineViewController: UIViewController{
     
-    var HeadlineTableView:UITableView?
+    var dataSource:Array<HLModel> = []
+    
+    
+    var HeadlineTableView:UITableView!
     var page:Int = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        CreatUI()
-        
+    
     }
+    
+
 
     //MARK:-初始化控件
     func CreatUI(){
         
-        self.HeadlineTableView? = UITableView(frame:CGRectMake(0, 0, SCREEN_W, SCREEN_H-Navi_H-Bar_H))
+        self.HeadlineTableView = UITableView(frame:CGRectMake(0, 0, SCREEN_W, SCREEN_H-Navi_H-Bar_H))
         
-        HeadlineTableView?.delegate = self
+        HeadlineTableView.delegate = self
         
-        HeadlineTableView?.dataSource  = self
+        HeadlineTableView.dataSource  = self
         
-        
-        
-        
+//        HeadlineTableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "UITableView")
         
     }
     
@@ -42,7 +47,25 @@ class HeadlineViewController: UIViewController ,UITableViewDelegate,UITableViewD
         
         AMFHelper .BaiduGet(baiduNewsTouTiaoUrl, parameters: dic, success: { (responseObject) in
             
+            print(responseObject)
             
+            let result = JSON(responseObject)
+            
+            let arr = result["data"]["article"].array!
+            
+            for dic in arr{
+                
+                let model = HLModel()
+                
+                model.setValuesForKeysWithDictionary(dic.dictionaryObject!)
+                
+                self.dataSource.append(model)
+            }
+            
+            dispatch_async(dispatch_get_main_queue(), { 
+                
+                self.HeadlineTableView.reloadData()
+            })
             
             }) { (error) in
             
@@ -51,20 +74,32 @@ class HeadlineViewController: UIViewController ,UITableViewDelegate,UITableViewD
         }
     }
     
-    //MARK:-tableView代理方法
 
+
+    
+}
+
+
+
+extension HeadlineViewController:UITableViewDataSource,UITableViewDelegate
+{
+    //MARK:-tableView代理方法
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return 0
+        return dataSource.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        let cell = UITableViewCell()
+        let cell = tableView.dequeueReusableCellWithIdentifier("UITableView")
         
-        return cell
+        cell!.textLabel?.text = "dkjkdajkjdjafljdkfdakj"
+        
+        return cell!
     }
-
-
+    
+    
+    
     
 }

@@ -8,9 +8,9 @@
 
 import UIKit
 
-class LYHomePageViewController: UIViewController,UIScrollViewDelegate{
+class LYHomePageViewController: UIViewController{
     
-    
+    var headlineVc:UITableView?
     
     var barView:NaviBarView? = NaviBarView()
     
@@ -46,14 +46,37 @@ class LYHomePageViewController: UIViewController,UIScrollViewDelegate{
         
         self.view.addSubview(newsScrollView!)
         
+        //添加tableView
+        
+        let vc =  HeadlineViewController()
+        
+        vc.CreatUI()
+        
+        headlineVc = vc.HeadlineTableView
+        
+        vc.getDataFromNetWork()
+        
+        newsScrollView?.addSubview(headlineVc!)
+        
+        
     }
     
+
+
+
+   
+
+
+}
+
+extension LYHomePageViewController:UIScrollViewDelegate {
+
     //MARK:-scrollView代理方法
     func scrollViewDidScroll(scrollView: UIScrollView)
     {
         let offsetPage = scrollView.contentOffset.x/SCREEN_W
         
-        UIView.animateWithDuration(0.3) { 
+        UIView.animateWithDuration(0.3) {
             
             self.barView?.redView.frame = CGRectMake(offsetPage*50, 40, 50, 2)
         }
@@ -64,7 +87,6 @@ class LYHomePageViewController: UIViewController,UIScrollViewDelegate{
     }// any offset changes
 
 
-   
 
 
 }
