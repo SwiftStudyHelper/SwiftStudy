@@ -15,7 +15,7 @@ class TXHomePageViewController: UIViewController ,UITableViewDelegate,UITableVie
         
         self.view.backgroundColor = UIColor.brownColor()
      
-        var myTableView = UITableView(frame: CGRectMake(0, 0, SCREEN_W, SCREEN_H), style:UITableViewStyle.Grouped)
+        var myTableView = UITableView(frame: CGRectMake(0, 0, SCREEN_W, SCREEN_H - 64), style:UITableViewStyle.Grouped)
         
         self.view.addSubview(myTableView)
         
@@ -38,18 +38,17 @@ class TXHomePageViewController: UIViewController ,UITableViewDelegate,UITableVie
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 45
+        return 55
+    }
+    
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 0.1
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = UITableViewCell()
         cell.textLabel?.text = "MyFirstSwift"
         cell.detailTextLabel?.text = "gaga"
-        if indexPath.row%2 == 0 {
-            cell.imageView?.image = UIImage(named: "image1")
-        }else{
-            cell.imageView?.image = UIImage(named: "image2")
-        }
         return cell
     }
 
