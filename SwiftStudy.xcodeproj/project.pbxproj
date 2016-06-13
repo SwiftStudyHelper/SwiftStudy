@@ -10,6 +10,8 @@
 		739A8E9C1D07F21100CA9E04 /* AMFHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739A8E9B1D07F21100CA9E04 /* AMFHelper.swift */; };
 		B05CBD730A03FECFB7064A12 /* Pods_SwiftStudy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D261BD0D0E90B7BAD2016C3 /* Pods_SwiftStudy.framework */; };
 		B62665CE1D0E4440002C7176 /* URLFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62665CD1D0E4440002C7176 /* URLFile.swift */; };
+		B62665D61D0E494B002C7176 /* LYHomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62665D51D0E494B002C7176 /* LYHomePageViewController.swift */; };
+		B62665D81D0E4A05002C7176 /* NaviBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62665D71D0E4A05002C7176 /* NaviBarView.swift */; };
 		B65AD61D1D027348006F3C81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65AD61C1D027348006F3C81 /* AppDelegate.swift */; };
 		B65AD6221D027348006F3C81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B65AD6201D027348006F3C81 /* Main.storyboard */; };
 		B65AD6241D027348006F3C81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B65AD6231D027348006F3C81 /* Assets.xcassets */; };
@@ -18,7 +20,6 @@
 		B65AD6391D02AC3E006F3C81 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65AD6381D02AC3E006F3C81 /* File.swift */; };
 		B69B2E441D07A43F00FF4DA0 /* ZKQHomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69B2E431D07A43F00FF4DA0 /* ZKQHomePageViewController.swift */; };
 		B69B2E461D07A45300FF4DA0 /* TXHomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69B2E451D07A45300FF4DA0 /* TXHomePageViewController.swift */; };
-		B69B2E481D07A46300FF4DA0 /* LYHomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69B2E471D07A46300FF4DA0 /* LYHomePageViewController.swift */; };
 		B69B2E4A1D07A47400FF4DA0 /* ZBHomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69B2E491D07A47400FF4DA0 /* ZBHomePageViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,8 @@
 		5D261BD0D0E90B7BAD2016C3 /* Pods_SwiftStudy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftStudy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		739A8E9B1D07F21100CA9E04 /* AMFHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AMFHelper.swift; sourceTree = "<group>"; };
 		B62665CD1D0E4440002C7176 /* URLFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLFile.swift; sourceTree = "<group>"; };
+		B62665D51D0E494B002C7176 /* LYHomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LYHomePageViewController.swift; sourceTree = "<group>"; };
+		B62665D71D0E4A05002C7176 /* NaviBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NaviBarView.swift; sourceTree = "<group>"; };
 		B65AD6191D027348006F3C81 /* SwiftStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B65AD61C1D027348006F3C81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B65AD6211D027348006F3C81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -37,7 +40,6 @@
 		B65AD6381D02AC3E006F3C81 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		B69B2E431D07A43F00FF4DA0 /* ZKQHomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZKQHomePageViewController.swift; sourceTree = "<group>"; };
 		B69B2E451D07A45300FF4DA0 /* TXHomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TXHomePageViewController.swift; sourceTree = "<group>"; };
-		B69B2E471D07A46300FF4DA0 /* LYHomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LYHomePageViewController.swift; sourceTree = "<group>"; };
 		B69B2E491D07A47400FF4DA0 /* ZBHomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZBHomePageViewController.swift; sourceTree = "<group>"; };
 		F722DCCFC94ECA812EB98A16 /* Pods-SwiftStudy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftStudy.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftStudy/Pods-SwiftStudy.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,6 +71,39 @@
 				5D261BD0D0E90B7BAD2016C3 /* Pods_SwiftStudy.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B62665CF1D0E48C5002C7176 /* News（首页） */ = {
+			isa = PBXGroup;
+			children = (
+				B62665D41D0E494B002C7176 /* Controller */,
+				B62665D31D0E4930002C7176 /* Model */,
+				B62665D21D0E492B002C7176 /* View */,
+			);
+			path = "News（首页）";
+			sourceTree = "<group>";
+		};
+		B62665D21D0E492B002C7176 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B62665D71D0E4A05002C7176 /* NaviBarView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B62665D31D0E4930002C7176 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B62665D41D0E494B002C7176 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B62665D51D0E494B002C7176 /* LYHomePageViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		B65AD6101D027348006F3C81 = {
@@ -136,7 +171,7 @@
 		B69B2E401D07A3C600FF4DA0 /* 李阳 */ = {
 			isa = PBXGroup;
 			children = (
-				B69B2E471D07A46300FF4DA0 /* LYHomePageViewController.swift */,
+				B62665CF1D0E48C5002C7176 /* News（首页） */,
 			);
 			path = "李阳";
 			sourceTree = "<group>";
@@ -279,6 +314,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B62665D81D0E4A05002C7176 /* NaviBarView.swift in Sources */,
 				B65AD6391D02AC3E006F3C81 /* File.swift in Sources */,
 				B69B2E4A1D07A47400FF4DA0 /* ZBHomePageViewController.swift in Sources */,
 				B69B2E461D07A45300FF4DA0 /* TXHomePageViewController.swift in Sources */,
@@ -287,7 +323,7 @@
 				B65AD6321D0289DF006F3C81 /* TabBarController.swift in Sources */,
 				B65AD61D1D027348006F3C81 /* AppDelegate.swift in Sources */,
 				739A8E9C1D07F21100CA9E04 /* AMFHelper.swift in Sources */,
-				B69B2E481D07A46300FF4DA0 /* LYHomePageViewController.swift in Sources */,
+				B62665D61D0E494B002C7176 /* LYHomePageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
