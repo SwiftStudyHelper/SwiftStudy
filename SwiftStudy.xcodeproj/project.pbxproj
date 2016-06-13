@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		739A8E9C1D07F21100CA9E04 /* AMFHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739A8E9B1D07F21100CA9E04 /* AMFHelper.swift */; };
 		B05CBD730A03FECFB7064A12 /* Pods_SwiftStudy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D261BD0D0E90B7BAD2016C3 /* Pods_SwiftStudy.framework */; };
+		B62665CE1D0E4440002C7176 /* URLFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62665CD1D0E4440002C7176 /* URLFile.swift */; };
 		B65AD61D1D027348006F3C81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65AD61C1D027348006F3C81 /* AppDelegate.swift */; };
 		B65AD6221D027348006F3C81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B65AD6201D027348006F3C81 /* Main.storyboard */; };
 		B65AD6241D027348006F3C81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B65AD6231D027348006F3C81 /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 		047A81D83A29E629A315B16E /* Pods-SwiftStudy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftStudy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftStudy/Pods-SwiftStudy.debug.xcconfig"; sourceTree = "<group>"; };
 		5D261BD0D0E90B7BAD2016C3 /* Pods_SwiftStudy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftStudy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		739A8E9B1D07F21100CA9E04 /* AMFHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AMFHelper.swift; sourceTree = "<group>"; };
+		B62665CD1D0E4440002C7176 /* URLFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLFile.swift; sourceTree = "<group>"; };
 		B65AD6191D027348006F3C81 /* SwiftStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B65AD61C1D027348006F3C81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B65AD6211D027348006F3C81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 		B65AD62F1D028966006F3C81 /* RootFiles(框架) */ = {
 			isa = PBXGroup;
 			children = (
+				B62665CD1D0E4440002C7176 /* URLFile.swift */,
 				B65AD6381D02AC3E006F3C81 /* File.swift */,
 				B65AD6301D028990006F3C81 /* Controller */,
 			);
@@ -279,6 +282,7 @@
 				B65AD6391D02AC3E006F3C81 /* File.swift in Sources */,
 				B69B2E4A1D07A47400FF4DA0 /* ZBHomePageViewController.swift in Sources */,
 				B69B2E461D07A45300FF4DA0 /* TXHomePageViewController.swift in Sources */,
+				B62665CE1D0E4440002C7176 /* URLFile.swift in Sources */,
 				B69B2E441D07A43F00FF4DA0 /* ZKQHomePageViewController.swift in Sources */,
 				B65AD6321D0289DF006F3C81 /* TabBarController.swift in Sources */,
 				B65AD61D1D027348006F3C81 /* AppDelegate.swift in Sources */,
