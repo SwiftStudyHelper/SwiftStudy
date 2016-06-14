@@ -19,7 +19,7 @@ class NewsCommTableViewCell: UITableViewCell {
         
         self.newsTitleLabel.text = model.title
         
-        self.newsTimeLabel.text = String(model.time)
+        self.newsTimeLabel.text = CalculateTimeHelper.calculateTimeWithInterval(model.time)
         
         self.newsAuthorLabel.text = model.author
         

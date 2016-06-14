@@ -8,6 +8,12 @@
 
 import UIKit
 
+protocol NaviBarViewDelegate:NSObjectProtocol {
+    
+    func clickTitleBtn(btn:UIButton)
+}
+
+
 class NaviBarView: UIView {
     
     let btnWidth:CGFloat = 50
@@ -16,7 +22,9 @@ class NaviBarView: UIView {
     
     var redView:UIView = UIView()
     
-    let titles = ["头条","国际","科技","体育","苹果","社会","美女","段子"]
+    let titles = ["头条","国际","科技","体育","网络","社会","美女","段子"]
+    
+    weak var delegate:NaviBarViewDelegate?
     
     //重载父类的init方法
     override init(frame: CGRect) {
@@ -53,7 +61,7 @@ class NaviBarView: UIView {
             
             btn.tag = 1000+i
             
-            btn.addTarget(self, action:#selector(clickBtn(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+            btn.addTarget(self, action:#selector(NaviBarView.clickBtn(_:)), forControlEvents: UIControlEvents.TouchUpInside)
             
             btn.setTitle(titles[i], forState: UIControlState.Normal)
             
@@ -134,8 +142,8 @@ class NaviBarView: UIView {
             animationWithTitle(0)
         }
         
-        //回调
-        
+        //回调出去
+        self.delegate?.clickTitleBtn(btn)
     }
     
     

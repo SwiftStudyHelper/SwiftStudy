@@ -43,8 +43,9 @@ class ZKQHomePageViewController: UIViewController {
             
         }
         
+         print(CalculateTimeHelper.calculateTimeWithInterval(1465871624))
        
-        
+       
         // Do any additional setup after loading the view.
     }
 
