@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		733F52981D0E9BC5006F9669 /* TXHomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733F52971D0E9BC5006F9669 /* TXHomePageViewController.swift */; };
+		737AE7161D0FB0A800B6C721 /* TXWeatherDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737AE7151D0FB0A800B6C721 /* TXWeatherDetailCell.swift */; };
+		737AE71F1D0FD68900B6C721 /* WheatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737AE71E1D0FD68900B6C721 /* WheatherModel.swift */; };
 		7382EFC01D0E53AC0090B268 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7382EFBF1D0E53AC0090B268 /* Model.swift */; };
 		739A8E9C1D07F21100CA9E04 /* AMFHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739A8E9B1D07F21100CA9E04 /* AMFHelper.swift */; };
 		863DA56FE6DE748CBC3E1D49 /* Pods_SwiftStudy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F94FF96E56C33A795A1BD67 /* Pods_SwiftStudy.framework */; };
@@ -32,6 +34,8 @@
 /* Begin PBXFileReference section */
 		4F94FF96E56C33A795A1BD67 /* Pods_SwiftStudy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftStudy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		733F52971D0E9BC5006F9669 /* TXHomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TXHomePageViewController.swift; sourceTree = "<group>"; };
+		737AE7151D0FB0A800B6C721 /* TXWeatherDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TXWeatherDetailCell.swift; sourceTree = "<group>"; };
+		737AE71E1D0FD68900B6C721 /* WheatherModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WheatherModel.swift; sourceTree = "<group>"; };
 		7382EFBF1D0E53AC0090B268 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		739A8E9B1D07F21100CA9E04 /* AMFHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AMFHelper.swift; sourceTree = "<group>"; };
 		B1392EC2F48A340864244681 /* Pods-SwiftStudy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftStudy.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftStudy/Pods-SwiftStudy.release.xcconfig"; sourceTree = "<group>"; };
@@ -80,15 +84,9 @@
 		733F52941D0E9BB8006F9669 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				737AE7151D0FB0A800B6C721 /* TXWeatherDetailCell.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		733F52951D0E9BBF006F9669 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		733F52961D0E9BC5006F9669 /* Controller */ = {
@@ -97,6 +95,14 @@
 				733F52971D0E9BC5006F9669 /* TXHomePageViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		737AE71D1D0FD44B00B6C721 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				737AE71E1D0FD68900B6C721 /* WheatherModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		7382EFBE1D0E53900090B268 /* Model */ = {
@@ -219,7 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				733F52961D0E9BC5006F9669 /* Controller */,
-				733F52951D0E9BBF006F9669 /* Model */,
+				737AE71D1D0FD44B00B6C721 /* Model */,
 				733F52941D0E9BB8006F9669 /* View */,
 			);
 			path = "田鑫";
@@ -374,8 +380,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B62665E61D0E8D04002C7176 /* HeadlineViewController.swift in Sources */,
+				737AE71F1D0FD68900B6C721 /* WheatherModel.swift in Sources */,
 				B65AD6391D02AC3E006F3C81 /* File.swift in Sources */,
 				B6C8CD5D1D0EB72600D41900 /* NewsWebViewController.swift in Sources */,
+				737AE7161D0FB0A800B6C721 /* TXWeatherDetailCell.swift in Sources */,
 				733F52981D0E9BC5006F9669 /* TXHomePageViewController.swift in Sources */,
 				B62665CE1D0E4440002C7176 /* URLFile.swift in Sources */,
 				B69B2E441D07A43F00FF4DA0 /* ZKQHomePageViewController.swift in Sources */,
