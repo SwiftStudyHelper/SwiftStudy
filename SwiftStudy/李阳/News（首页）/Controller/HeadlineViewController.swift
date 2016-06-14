@@ -10,6 +10,8 @@ import UIKit
 
 import SwiftyJSON
 
+import MJRefresh
+
 protocol HeadlineViewControllerDelegate:NSObjectProtocol {
     
     func clickTheCellWithIndexPath(url:String)
