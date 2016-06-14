@@ -88,9 +88,23 @@ class HeadlineViewController: UIViewController{
                 self.dataSource.append(model)
             }
             
-            dispatch_async(dispatch_get_main_queue(), { 
+            dispatch_async(dispatch_get_main_queue(), {
+                
+                if self.page == 1
+                {
+                    self.HeadlineTableView!.mj_header.endRefreshing()
+
+                }
+                else
+                {
+                    
+                    self.HeadlineTableView!.mj_footer.endRefreshing()
+                
+                }
                 
                 self.HeadlineTableView!.reloadData()
+                
+
             })
             
             }) { (error) in
@@ -105,7 +119,12 @@ class HeadlineViewController: UIViewController{
     func headerRefresh(){
         print("下拉刷新")
         // 结束刷新
-        self.HeadlineTableView!.mj_header.endRefreshing()
+        self.page = 1
+        
+        self.dataSource.removeAll()
+        
+        self.getDataFromNetWork()
+        
         
         
     }
@@ -113,7 +132,12 @@ class HeadlineViewController: UIViewController{
     // 底部刷新
     func footerRefresh(){
         print("上拉刷新")
-        self.HeadlineTableView!.mj_footer.endRefreshing()
+        
+        self.page += 1
+        
+        self.getDataFromNetWork()
+
+        
         
         
     }
