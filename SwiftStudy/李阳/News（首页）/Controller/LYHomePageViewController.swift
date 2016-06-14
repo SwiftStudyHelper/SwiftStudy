@@ -10,7 +10,7 @@ import UIKit
 
 class LYHomePageViewController: UIViewController{
     
-    var headLineController:HeadlineViewController = HeadlineViewController()
+    var vcArr:Array<HeadlineViewController> = []
     
     var barView:NaviBarView? = NaviBarView()
     
@@ -32,6 +32,8 @@ class LYHomePageViewController: UIViewController{
         
         barView?.frame = CGRectMake(0, 0, SCREEN_W-24, 44)
         
+        barView?.delegate = self
+        
         self.navigationItem.titleView = barView!
         
         newsScrollView?.frame = CGRectMake(0, 0, SCREEN_W, SCREEN_H-Navi_H-Bar_H)
@@ -48,13 +50,30 @@ class LYHomePageViewController: UIViewController{
         
         //添加controller
         
-        self.headLineController.CreatUI()
+        let keyArr  = ["recomm","world","tech","sports","internet","society"]
         
-        self.headLineController.getDataFromNetWork()
+        for i in 0..<6
+        {
+            
+            let vc = HeadlineViewController()
+            
+            vcArr.append(vc)
+            
+            vc.delegate = self
+            
+            vc.typeKey = keyArr[i]
+            
+            vc.locationKey = CGFloat(i)
+            
+            vc.CreatUI()
+            
+            vc.getDataFromNetWork()
+            
+            newsScrollView?.addSubview( vc.HeadlineTableView!)
+
+            
+        }
         
-        self.headLineController.delegate = self
-        
-        newsScrollView?.addSubview( self.headLineController.HeadlineTableView!)
         
         
     }
@@ -100,11 +119,27 @@ extension LYHomePageViewController:HeadlineViewControllerDelegate{
         
         vc.url = url
         
+        
         self.navigationController?.pushViewController(vc, animated: true)
         
     }
 
     
+}
+
+extension LYHomePageViewController:NaviBarViewDelegate
+{
+    
+    func clickTitleBtn(btn:UIButton)
+    {
+        let offset:CGFloat = CGFloat(btn.tag-1000)
+        
+       self.newsScrollView?.setContentOffset(CGPointMake(offset*SCREEN_W, 0), animated: true)
+        
+        
+    }
+
+
 }
 
 

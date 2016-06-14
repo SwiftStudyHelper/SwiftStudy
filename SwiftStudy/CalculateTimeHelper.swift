@@ -52,5 +52,39 @@ class CalculateTimeHelper: NSObject {
     
     
     
+//    class func getImageSizeWithURL(imageURL:String) -> CGSize {
+//        
+//        let URL = NSURL(string: imageURL)
+//        
+//        let request = NSMutableURLRequest(URL: URL!)
+//        
+//        let size:CGSize = getJPGImageSizeWithRequest(request)
+//        
+//        if CGSizeEqualToSize(CGSizeZero, size)
+//        {
+//        
+//        
+//        }
+//        
+//        
+//        return size
+//        
+//    }
+//    
+//    class func getJPGImageSizeWithRequest(request:NSMutableURLRequest)->CGSize{
+//        
+//        
+//        request.setValue("bytes=0-209", forHTTPHeaderField: "Range")
+//        
+//        let data:NSData  = NSURLSession.dataTaskWithRequest(request)
+//        
+//        NSURLConnection.sendSynchronousRequest(request, returningResponse: nil)
+//        
+//        let image:UIImage = UIImage(data: data)!
+//        
+//        return image.size
+//  
+//    }
 
 }
+
