@@ -13,28 +13,18 @@ class CalculateTimeHelper: NSObject {
 
     class func calculateTimeWithInterval(interval:NSInteger)->String {
         
-        //把NSInteger转成string
-          let timeString = String(interval)
+        //把时间戳转化成日期
         
-        //创建formatter
-         let formatter = NSDateFormatter()
-        
-        //设置日期格式
-         formatter.dateFormat = "yyyy-MM-dd hh:mm:ss"
-        
-        //将时间戳转成时间
-        guard let time = formatter.dateFromString(timeString) else {
-        
-            return "0"
-        }
-        
+         let timeDate = NSDate.init(timeIntervalSince1970: (Double)(interval))
+   
         //获取现在时间
          let  currentTime = NSDate()
         
+        //获取日历
          let calendar = NSCalendar.currentCalendar()
         
         //创建 NSDateComponents
-         let comps  = calendar.components([NSCalendarUnit.Month,NSCalendarUnit.Day,NSCalendarUnit.Hour,NSCalendarUnit.Minute], fromDate: time, toDate: currentTime, options: NSCalendarOptions.WrapComponents)
+         let comps  = calendar.components([NSCalendarUnit.Month,NSCalendarUnit.Day,NSCalendarUnit.Hour,NSCalendarUnit.Minute], fromDate: timeDate, toDate: currentTime, options: NSCalendarOptions.WrapComponents)
         
         if comps.month > 0 {
             
