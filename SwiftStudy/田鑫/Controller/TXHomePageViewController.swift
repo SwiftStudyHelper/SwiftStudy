@@ -75,9 +75,26 @@ class TXHomePageViewController: UIViewController ,UITableViewDelegate,UITableVie
         return 0.1
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+    }
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = TXWeatherDetailCell()
-        return cell
+        
+        if indexPath.row == 1 {
+            var cell = TXWeatherDetailCell()
+            cell.selectionStyle = UITableViewCellSelectionStyle.None
+            return cell
+        }else{
+            var cell = UITableViewCell()
+            cell.selectionStyle = UITableViewCellSelectionStyle.None
+            cell.textLabel?.text = "123"
+            
+            return cell
+        }
+        
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
