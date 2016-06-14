@@ -10,6 +10,8 @@ import UIKit
 
 import SwiftyJSON
 
+import MJRefresh
+
 protocol HeadlineViewControllerDelegate:NSObjectProtocol {
     
     func clickTheCellWithIndexPath(url:String)
@@ -27,6 +29,10 @@ class HeadlineViewController: UIViewController{
     
     weak var delegate: HeadlineViewControllerDelegate?
 
+    // 顶部刷新
+    let header = MJRefreshNormalHeader()
+    // 底部刷新
+    let footer = MJRefreshAutoNormalFooter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +53,16 @@ class HeadlineViewController: UIViewController{
         self.HeadlineTableView!.dataSource  = self
         
         self.HeadlineTableView!.registerNib(UINib(nibName: "NewsCommTableViewCell",bundle: nil), forCellReuseIdentifier: "NewsCommTableViewCell")
+        
+        
+        // 下拉刷新
+        header.setRefreshingTarget(self, refreshingAction: #selector(HeadlineViewController.headerRefresh))
+        // 现在的版本要用mj_header
+        self.HeadlineTableView!.mj_header = header
+        
+        // 上拉刷新
+        footer.setRefreshingTarget(self, refreshingAction: #selector(HeadlineViewController.footerRefresh))
+        self.HeadlineTableView!.mj_footer = footer
         
     }
     
@@ -72,9 +88,23 @@ class HeadlineViewController: UIViewController{
                 self.dataSource.append(model)
             }
             
-            dispatch_async(dispatch_get_main_queue(), { 
+            dispatch_async(dispatch_get_main_queue(), {
+                
+                if self.page == 1
+                {
+                    self.HeadlineTableView!.mj_header.endRefreshing()
+
+                }
+                else
+                {
+                    
+                    self.HeadlineTableView!.mj_footer.endRefreshing()
+                
+                }
                 
                 self.HeadlineTableView!.reloadData()
+                
+
             })
             
             }) { (error) in
@@ -85,7 +115,32 @@ class HeadlineViewController: UIViewController{
     }
     
 
+    // 顶部刷新
+    func headerRefresh(){
+        print("下拉刷新")
+        // 结束刷新
+        self.page = 1
+        
+        self.dataSource.removeAll()
+        
+        self.getDataFromNetWork()
+        
+        
+        
+    }
+    
+    // 底部刷新
+    func footerRefresh(){
+        print("上拉刷新")
+        
+        self.page += 1
+        
+        self.getDataFromNetWork()
 
+        
+        
+        
+    }
    
 }
 

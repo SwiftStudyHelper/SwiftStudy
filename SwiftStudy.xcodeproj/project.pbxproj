@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		730EEBD71D0F9007008A5992 /* CalculateTimeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730EEBD61D0F9007008A5992 /* CalculateTimeHelper.swift */; };
 		733F52981D0E9BC5006F9669 /* TXHomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733F52971D0E9BC5006F9669 /* TXHomePageViewController.swift */; };
 		737AE7161D0FB0A800B6C721 /* TXWeatherDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737AE7151D0FB0A800B6C721 /* TXWeatherDetailCell.swift */; };
 		737AE71F1D0FD68900B6C721 /* WheatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737AE71E1D0FD68900B6C721 /* WheatherModel.swift */; };
@@ -33,6 +34,7 @@
 
 /* Begin PBXFileReference section */
 		4F94FF96E56C33A795A1BD67 /* Pods_SwiftStudy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftStudy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		730EEBD61D0F9007008A5992 /* CalculateTimeHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculateTimeHelper.swift; sourceTree = "<group>"; };
 		733F52971D0E9BC5006F9669 /* TXHomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TXHomePageViewController.swift; sourceTree = "<group>"; };
 		737AE7151D0FB0A800B6C721 /* TXWeatherDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TXWeatherDetailCell.swift; sourceTree = "<group>"; };
 		737AE71E1D0FD68900B6C721 /* WheatherModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WheatherModel.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 				B69B2E3F1D07A3B400FF4DA0 /* 周斌 */,
 				B65AD62F1D028966006F3C81 /* RootFiles(框架) */,
 				B65AD61C1D027348006F3C81 /* AppDelegate.swift */,
+				730EEBD61D0F9007008A5992 /* CalculateTimeHelper.swift */,
 				739A8E9B1D07F21100CA9E04 /* AMFHelper.swift */,
 				B65AD6201D027348006F3C81 /* Main.storyboard */,
 				B65AD6231D027348006F3C81 /* Assets.xcassets */,

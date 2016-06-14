@@ -53,7 +53,7 @@ class NaviBarView: UIView {
             
             btn.tag = 1000+i
             
-            btn.addTarget(self, action:#selector(clickBtn(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+            btn.addTarget(self, action:#selector(NaviBarView.clickBtn(_:)), forControlEvents: UIControlEvents.TouchUpInside)
             
             btn.setTitle(titles[i], forState: UIControlState.Normal)
             
