@@ -25,6 +25,10 @@ class HeadlineViewController: UIViewController{
     
     var HeadlineTableView:UITableView?
     
+    var  typeKey:String?
+    
+    var locationKey:CGFloat = 0.0
+    
     var page:Int = 1
     
     weak var delegate: HeadlineViewControllerDelegate?
@@ -44,7 +48,7 @@ class HeadlineViewController: UIViewController{
     //MARK:-初始化控件
     func CreatUI(){
         
-        self.HeadlineTableView = UITableView(frame:CGRectMake(0, 0, SCREEN_W, SCREEN_H-Navi_H-Bar_H))
+        self.HeadlineTableView = UITableView(frame:CGRectMake(locationKey*SCREEN_W, 0, SCREEN_W, SCREEN_H-Navi_H-Bar_H))
         
         self.HeadlineTableView?.backgroundView?.backgroundColor = UIColor.purpleColor()
         
@@ -69,7 +73,7 @@ class HeadlineViewController: UIViewController{
     //MARK:-网络请求
     func getDataFromNetWork()
     {
-        let dic:Dictionary<String,AnyObject>  = ["id":"popular","page":page]
+        let dic:Dictionary<String,AnyObject>  = ["id":self.typeKey!,"page":page]
         
         AMFHelper .BaiduGet(baiduNewsTouTiaoUrl, parameters: dic, success: { (responseObject) in
             
@@ -134,6 +138,14 @@ class HeadlineViewController: UIViewController{
         print("上拉刷新")
         
         self.page += 1
+        
+        if self.page > 10 {
+            
+            self.HeadlineTableView!.mj_footer.endRefreshing()
+            
+            return
+
+        }
         
         self.getDataFromNetWork()
 
