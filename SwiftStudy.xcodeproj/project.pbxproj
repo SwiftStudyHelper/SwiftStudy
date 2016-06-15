@@ -23,6 +23,7 @@
 		737AE7371D10001A00B6C721 /* w8.png in Resources */ = {isa = PBXBuildFile; fileRef = 737AE72E1D10001A00B6C721 /* w8.png */; };
 		7382EFC01D0E53AC0090B268 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7382EFBF1D0E53AC0090B268 /* Model.swift */; };
 		739A8E9C1D07F21100CA9E04 /* AMFHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739A8E9B1D07F21100CA9E04 /* AMFHelper.swift */; };
+		73F95A201D0FF6EE00BB2579 /* CalculateTimeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730EEBD61D0F9007008A5992 /* CalculateTimeHelper.swift */; };
 		863DA56FE6DE748CBC3E1D49 /* Pods_SwiftStudy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F94FF96E56C33A795A1BD67 /* Pods_SwiftStudy.framework */; };
 		B62665CE1D0E4440002C7176 /* URLFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62665CD1D0E4440002C7176 /* URLFile.swift */; };
 		B62665DF1D0E6713002C7176 /* LYHomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62665DB1D0E6713002C7176 /* LYHomePageViewController.swift */; };
@@ -40,10 +41,11 @@
 		B6C8CD591D0EAF0C00D41900 /* NewsCommTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C8CD571D0EAF0C00D41900 /* NewsCommTableViewCell.swift */; };
 		B6C8CD5A1D0EAF0C00D41900 /* NewsCommTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6C8CD581D0EAF0C00D41900 /* NewsCommTableViewCell.xib */; };
 		B6C8CD5D1D0EB72600D41900 /* NewsWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C8CD5C1D0EB72600D41900 /* NewsWebViewController.swift */; };
-		B6C8CD661D0EBED900D41900 /* ZBHomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C8CD651D0EBED900D41900 /* ZBHomePageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A3A684D1D0F901F008FEEE9 /* ZBHomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZBHomePageViewController.swift; sourceTree = "<group>"; };
+		2ABD9BC51D0FB0B200E47385 /* l2cplatLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = l2cplatLogo.png; sourceTree = "<group>"; };
 		4F94FF96E56C33A795A1BD67 /* Pods_SwiftStudy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftStudy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		730EEBD61D0F9007008A5992 /* CalculateTimeHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculateTimeHelper.swift; sourceTree = "<group>"; };
 		733F52971D0E9BC5006F9669 /* TXHomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TXHomePageViewController.swift; sourceTree = "<group>"; };
@@ -80,7 +82,6 @@
 		B6C8CD571D0EAF0C00D41900 /* NewsCommTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsCommTableViewCell.swift; sourceTree = "<group>"; };
 		B6C8CD581D0EAF0C00D41900 /* NewsCommTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsCommTableViewCell.xib; sourceTree = "<group>"; };
 		B6C8CD5C1D0EB72600D41900 /* NewsWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsWebViewController.swift; sourceTree = "<group>"; };
-		B6C8CD651D0EBED900D41900 /* ZBHomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZBHomePageViewController.swift; sourceTree = "<group>"; };
 		C27921668CE9B2F1E8884A48 /* Pods-SwiftStudy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftStudy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftStudy/Pods-SwiftStudy.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,6 +97,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A3A68481D0F8FFE008FEEE9 /* ZBFrisfController(首页) */ = {
+			isa = PBXGroup;
+			children = (
+				2A3A684A1D0F8FFE008FEEE9 /* Images */,
+				2A3A68491D0F8FFE008FEEE9 /* Controller */,
+				2A3A684B1D0F8FFE008FEEE9 /* Model */,
+				2A3A684C1D0F8FFE008FEEE9 /* View */,
+			);
+			path = "ZBFrisfController(首页)";
+			sourceTree = "<group>";
+		};
+		2A3A68491D0F8FFE008FEEE9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2A3A684D1D0F901F008FEEE9 /* ZBHomePageViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2A3A684A1D0F8FFE008FEEE9 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				2ABD9BC51D0FB0B200E47385 /* l2cplatLogo.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		2A3A684B1D0F8FFE008FEEE9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2A3A684C1D0F8FFE008FEEE9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		5508BC0AF52117640624FEB3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -250,7 +292,7 @@
 		B69B2E3F1D07A3B400FF4DA0 /* 周斌 */ = {
 			isa = PBXGroup;
 			children = (
-				B6C8CD651D0EBED900D41900 /* ZBHomePageViewController.swift */,
+				2A3A68481D0F8FFE008FEEE9 /* ZBFrisfController(首页) */,
 			);
 			path = "周斌";
 			sourceTree = "<group>";
@@ -444,9 +486,9 @@
 				B62665CE1D0E4440002C7176 /* URLFile.swift in Sources */,
 				B69B2E441D07A43F00FF4DA0 /* ZKQHomePageViewController.swift in Sources */,
 				7382EFC01D0E53AC0090B268 /* Model.swift in Sources */,
+				2A3A684E1D0F901F008FEEE9 /* ZBHomePageViewController.swift in Sources */,
 				B65AD6321D0289DF006F3C81 /* TabBarController.swift in Sources */,
 				B65AD61D1D027348006F3C81 /* AppDelegate.swift in Sources */,
-				B6C8CD661D0EBED900D41900 /* ZBHomePageViewController.swift in Sources */,
 				739A8E9C1D07F21100CA9E04 /* AMFHelper.swift in Sources */,
 				B62665E01D0E6713002C7176 /* NaviBarView.swift in Sources */,
 				B6C8CD561D0E9CAA00D41900 /* HLModel.swift in Sources */,
