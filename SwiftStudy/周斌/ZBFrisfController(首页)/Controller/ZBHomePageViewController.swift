@@ -33,19 +33,10 @@ class ZBHomePageViewController: UIViewController{
         tableView.registerNib(UINib(nibName:"JokeTableViewCell",bundle: nil), forCellReuseIdentifier: "JokeTableViewCell")
         
         tableView.registerNib(UINib(nibName:"FirstTableViewCell",bundle: nil), forCellReuseIdentifier: "FirstTableViewCell")
+
         
-       
-        
-        creatUI()
-        
-    }
-    
-    func creatUI(){
-        
-      
     }
  
-    
 }
 
 
