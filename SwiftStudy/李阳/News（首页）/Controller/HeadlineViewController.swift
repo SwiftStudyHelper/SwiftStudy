@@ -50,8 +50,6 @@ class HeadlineViewController: UIViewController{
         
         self.HeadlineTableView = UITableView(frame:CGRectMake(locationKey*SCREEN_W, 0, SCREEN_W, SCREEN_H-Navi_H-Bar_H))
         
-        self.HeadlineTableView?.backgroundView?.backgroundColor = UIColor.purpleColor()
-        
         self.HeadlineTableView!.delegate = self
         
         self.HeadlineTableView!.dataSource  = self
