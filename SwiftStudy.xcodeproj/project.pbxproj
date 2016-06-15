@@ -7,8 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A38118E1D10F6BE0096BEAE /* icon_kehulianxiren.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A3811861D10F6BE0096BEAE /* icon_kehulianxiren.png */; };
+		2A38118F1D10F6BE0096BEAE /* icon_qiye.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A3811871D10F6BE0096BEAE /* icon_qiye.png */; };
+		2A3811901D10F6BE0096BEAE /* icon_qunzu.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A3811881D10F6BE0096BEAE /* icon_qunzu.png */; };
+		2A3811911D10F6BE0096BEAE /* icon_xiangmu2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A3811891D10F6BE0096BEAE /* icon_xiangmu2.png */; };
+		2A3811981D1102900096BEAE /* JokeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3811961D1102900096BEAE /* JokeTableViewCell.swift */; };
+		2A3811991D1102900096BEAE /* JokeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A3811971D1102900096BEAE /* JokeTableViewCell.xib */; };
+		2A38119B1D11052C0096BEAE /* JokeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A38119A1D11052C0096BEAE /* JokeModel.swift */; };
+		2A38119E1D1109980096BEAE /* FirstTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A38119C1D1109980096BEAE /* FirstTableViewCell.swift */; };
+		2A38119F1D1109980096BEAE /* FirstTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A38119D1D1109980096BEAE /* FirstTableViewCell.xib */; };
+		2A3811A11D110B340096BEAE /* health.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2A3811A01D110B340096BEAE /* health.jpg */; };
 		2A3A684E1D0F901F008FEEE9 /* ZBHomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3A684D1D0F901F008FEEE9 /* ZBHomePageViewController.swift */; };
-		2ABD9BC61D0FB0B200E47385 /* l2cplatLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2ABD9BC51D0FB0B200E47385 /* l2cplatLogo.png */; };
+		2A5F878F1D10E3E8007B3980 /* DailyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5F878D1D10E3E8007B3980 /* DailyTableViewCell.swift */; };
+		2A5F87901D10E3E8007B3980 /* DailyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A5F878E1D10E3E8007B3980 /* DailyTableViewCell.xib */; };
 		733F52981D0E9BC5006F9669 /* TXHomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733F52971D0E9BC5006F9669 /* TXHomePageViewController.swift */; };
 		7382EFC01D0E53AC0090B268 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7382EFBF1D0E53AC0090B268 /* Model.swift */; };
 		739A8E9C1D07F21100CA9E04 /* AMFHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739A8E9B1D07F21100CA9E04 /* AMFHelper.swift */; };
@@ -38,8 +49,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A3811861D10F6BE0096BEAE /* icon_kehulianxiren.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_kehulianxiren.png; sourceTree = "<group>"; };
+		2A3811871D10F6BE0096BEAE /* icon_qiye.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_qiye.png; sourceTree = "<group>"; };
+		2A3811881D10F6BE0096BEAE /* icon_qunzu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_qunzu.png; sourceTree = "<group>"; };
+		2A3811891D10F6BE0096BEAE /* icon_xiangmu2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_xiangmu2.png; sourceTree = "<group>"; };
+		2A3811961D1102900096BEAE /* JokeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JokeTableViewCell.swift; sourceTree = "<group>"; };
+		2A3811971D1102900096BEAE /* JokeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JokeTableViewCell.xib; sourceTree = "<group>"; };
+		2A38119A1D11052C0096BEAE /* JokeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JokeModel.swift; sourceTree = "<group>"; };
+		2A38119C1D1109980096BEAE /* FirstTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstTableViewCell.swift; sourceTree = "<group>"; };
+		2A38119D1D1109980096BEAE /* FirstTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstTableViewCell.xib; sourceTree = "<group>"; };
+		2A3811A01D110B340096BEAE /* health.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = health.jpg; sourceTree = "<group>"; };
 		2A3A684D1D0F901F008FEEE9 /* ZBHomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZBHomePageViewController.swift; sourceTree = "<group>"; };
-		2ABD9BC51D0FB0B200E47385 /* l2cplatLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = l2cplatLogo.png; sourceTree = "<group>"; };
+		2A5F878D1D10E3E8007B3980 /* DailyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyTableViewCell.swift; sourceTree = "<group>"; };
+		2A5F878E1D10E3E8007B3980 /* DailyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DailyTableViewCell.xib; sourceTree = "<group>"; };
 		4F94FF96E56C33A795A1BD67 /* Pods_SwiftStudy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftStudy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		730EEBD61D0F9007008A5992 /* CalculateTimeHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculateTimeHelper.swift; sourceTree = "<group>"; };
 		733F52971D0E9BC5006F9669 /* TXHomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TXHomePageViewController.swift; sourceTree = "<group>"; };
@@ -106,7 +128,11 @@
 		2A3A684A1D0F8FFE008FEEE9 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				2ABD9BC51D0FB0B200E47385 /* l2cplatLogo.png */,
+				2A3811A01D110B340096BEAE /* health.jpg */,
+				2A3811861D10F6BE0096BEAE /* icon_kehulianxiren.png */,
+				2A3811871D10F6BE0096BEAE /* icon_qiye.png */,
+				2A3811881D10F6BE0096BEAE /* icon_qunzu.png */,
+				2A3811891D10F6BE0096BEAE /* icon_xiangmu2.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -114,6 +140,7 @@
 		2A3A684B1D0F8FFE008FEEE9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2A38119A1D11052C0096BEAE /* JokeModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -121,6 +148,12 @@
 		2A3A684C1D0F8FFE008FEEE9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2A5F878D1D10E3E8007B3980 /* DailyTableViewCell.swift */,
+				2A5F878E1D10E3E8007B3980 /* DailyTableViewCell.xib */,
+				2A3811961D1102900096BEAE /* JokeTableViewCell.swift */,
+				2A3811971D1102900096BEAE /* JokeTableViewCell.xib */,
+				2A38119C1D1109980096BEAE /* FirstTableViewCell.swift */,
+				2A38119D1D1109980096BEAE /* FirstTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -377,10 +410,16 @@
 			files = (
 				B6D18AFC1D10E2BB00705E87 /* JokeTableViewCell.xib in Resources */,
 				B65AD6271D027348006F3C81 /* LaunchScreen.storyboard in Resources */,
+				2A38119F1D1109980096BEAE /* FirstTableViewCell.xib in Resources */,
+				2A3811A11D110B340096BEAE /* health.jpg in Resources */,
+				2A3811991D1102900096BEAE /* JokeTableViewCell.xib in Resources */,
+				2A3811911D10F6BE0096BEAE /* icon_xiangmu2.png in Resources */,
 				B65AD6241D027348006F3C81 /* Assets.xcassets in Resources */,
 				B65AD6221D027348006F3C81 /* Main.storyboard in Resources */,
+				2A3811901D10F6BE0096BEAE /* icon_qunzu.png in Resources */,
 				B6C8CD5A1D0EAF0C00D41900 /* NewsCommTableViewCell.xib in Resources */,
-				2ABD9BC61D0FB0B200E47385 /* l2cplatLogo.png in Resources */,
+				2A38118F1D10F6BE0096BEAE /* icon_qiye.png in Resources */,
+				2A5F87901D10E3E8007B3980 /* DailyTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,6 +488,7 @@
 				B62665CE1D0E4440002C7176 /* URLFile.swift in Sources */,
 				B69B2E441D07A43F00FF4DA0 /* ZKQHomePageViewController.swift in Sources */,
 				7382EFC01D0E53AC0090B268 /* Model.swift in Sources */,
+				2A5F878F1D10E3E8007B3980 /* DailyTableViewCell.swift in Sources */,
 				2A3A684E1D0F901F008FEEE9 /* ZBHomePageViewController.swift in Sources */,
 				B65AD6321D0289DF006F3C81 /* TabBarController.swift in Sources */,
 				B6D18AFB1D10E2BB00705E87 /* JokeTableViewCell.swift in Sources */,
