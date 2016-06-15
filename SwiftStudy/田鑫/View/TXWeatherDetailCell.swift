@@ -30,17 +30,38 @@ class TXWeatherDetailCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.backgroundColor = UIColor.cyanColor()
         self.backgroundView = UIImageView(image:UIImage(named:"cellBackView"))
-        city = UILabel(frame: CGRectMake(SCREEN_W / 2 - 50 , 150, 100, 50))
+        city = UILabel(frame: CGRectMake(SCREEN_W / 2 - 100 , 180, 200, 50))
         city.backgroundColor = UIColor.clearColor()
-        city.text = "西安市"
-        city.font = UIFont.systemFontOfSize(23);
+        city.text = "Xi'an"
+        city.font = UIFont(name: "AmericanTypewriter-Bold", size: 35)//设置字体，同时设置大小
+        city.textColor = RGBA(255, G: 0, B: 128, A: 0.6)
         city.textAlignment = NSTextAlignment.Center
         self.addSubview(city)
         
-        
-        weatherImage = UIImageView(frame: CGRectMake(100, 100, 50, 50))
+        weatherImage = UIImageView(frame: CGRectMake(SCREEN_W / 2 - 55, 50, 110, 110))
         weatherImage.image = UIImage(named:"w0")
         self.addSubview(weatherImage)
+        
+        let line1 = UILabel(frame: CGRectMake(SCREEN_W/2 - 150, 270, 300, 2))
+        line1.backgroundColor = UIColor.lightGrayColor()
+        line1.alpha = 0.6
+        self.addSubview(line1)
+        
+        tmp = UILabel(frame: CGRectMake(40, CGRectGetMaxY(line1.frame) + 40, 100, 100))
+        tmp.text = "27℃"
+        tmp.font = UIFont.systemFontOfSize(40)
+        self.addSubview(tmp)
+        
+        let flName = UILabel(frame: CGRectMake(CGRectGetMaxX(tmp.frame) + 50, CGRectGetMinY(line1.frame) + 20, 70, 30))
+        flName.text = "体感温度"
+        flName.font = UIFont.systemFontOfSize(14)
+        self.addSubview(flName)
+        
+        fl = UILabel(frame: CGRectMake(CGRectGetMaxX(flName.frame) + 10, CGRectGetMinY(flName.frame), 70, 30))
+        fl.text = "30℃"
+        fl.font = UIFont.systemFontOfSize(14)
+        self.addSubview(fl)
+        
     }
     
     required init(coder aDecoder: NSCoder) {

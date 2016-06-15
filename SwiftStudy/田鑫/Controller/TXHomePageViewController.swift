@@ -39,7 +39,7 @@ class TXHomePageViewController: UIViewController ,UITableViewDelegate,UITableVie
     
     func getDataFromNetWork()
     {
-        let dic:Dictionary<String,AnyObject>  = ["city":"xian"]
+        let dic:Dictionary<String,AnyObject>  = ["city":"西安"]
         
         AMFHelper .BaiduGet(baiduWeatherUrl, parameters: dic, success: { (responseObject) in
             
@@ -58,15 +58,11 @@ class TXHomePageViewController: UIViewController ,UITableViewDelegate,UITableVie
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 1
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        if indexPath.row == 1 {
-            return 400
-        }else{
-            return 55
-        }
+        return SCREEN_H - 200
         
 
     }
@@ -81,19 +77,9 @@ class TXHomePageViewController: UIViewController ,UITableViewDelegate,UITableVie
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        if indexPath.row == 1 {
-            var cell = TXWeatherDetailCell()
-            cell.selectionStyle = UITableViewCellSelectionStyle.None
-            return cell
-        }else{
-            var cell = UITableViewCell()
-            cell.selectionStyle = UITableViewCellSelectionStyle.None
-            cell.textLabel?.text = "123"
-            
-            return cell
-        }
-        
-        
+        var cell = TXWeatherDetailCell()
+        cell.selectionStyle = UITableViewCellSelectionStyle.None
+        return cell
         
     }
 
