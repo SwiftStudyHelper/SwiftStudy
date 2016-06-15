@@ -16,6 +16,7 @@ class LYHomePageViewController: UIViewController{
     
     var newsScrollView:UIScrollView? = UIScrollView()
     
+    var jokeVc:JokeViewController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,6 +76,18 @@ class LYHomePageViewController: UIViewController{
         }
         
         
+        self.jokeVc = JokeViewController()
+        
+        self.jokeVc?.createUI()
+        
+        self.jokeVc?.getDataFromNetwork()
+        
+        newsScrollView?.addSubview((jokeVc?.tableView!)!)
+
+        
+        
+        
+        
         
     }
     
@@ -101,8 +114,7 @@ extension LYHomePageViewController:UIScrollViewDelegate {
         self.barView?.redTitle(Int(offsetPage))
         
         
-    }// any offset changes
-
+    }
 
 
 

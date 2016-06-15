@@ -9,10 +9,20 @@
 import UIKit
 
 class BeautyGirlViewController: UIViewController {
+    
+    var collectionView:UICollectionView?
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+    }
+    
+    func creatUI() {
+        
+        
         
     }
 

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="229" id="KGk-i7-Jjw" customClass="ButtonMyTableViewCell" customModule="SwiftStudy" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="396" height="229"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="396" height="228"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oeZ-3s-JFx" customClass="MyCustomButton" customModule="SwiftStudy" customModuleProvider="target">
+                        <rect key="frame" x="20" y="20" width="172" height="88"/>
+                        <state key="normal" title="Button"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YPl-W6-NZC" customClass="MyCustomButton" customModule="SwiftStudy" customModuleProvider="target">
+                        <rect key="frame" x="204" y="20" width="172" height="88"/>
+                        <state key="normal" title="Button"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gse-G9-2Et" customClass="MyCustomButton" customModule="SwiftStudy" customModuleProvider="target">
+                        <rect key="frame" x="20" y="120" width="172" height="88"/>
+                        <state key="normal" title="Button"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xtj-bj-yAt" customClass="MyCustomButton" customModule="SwiftStudy" customModuleProvider="target">
+                        <rect key="frame" x="204" y="120" width="172" height="88"/>
+                        <state key="normal" title="Button"/>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstItem="gse-G9-2Et" firstAttribute="height" secondItem="oeZ-3s-JFx" secondAttribute="height" id="5EN-o1-7ed"/>
+                    <constraint firstItem="gse-G9-2Et" firstAttribute="top" secondItem="oeZ-3s-JFx" secondAttribute="bottom" constant="12" id="7Rs-27-d46"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="gse-G9-2Et" secondAttribute="bottom" constant="12" id="7Uu-S0-ut2"/>
+                    <constraint firstItem="YPl-W6-NZC" firstAttribute="width" secondItem="oeZ-3s-JFx" secondAttribute="width" id="CpO-aJ-3oD"/>
+                    <constraint firstItem="YPl-W6-NZC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="12" id="DnA-sX-Loc"/>
+                    <constraint firstItem="Xtj-bj-yAt" firstAttribute="height" secondItem="oeZ-3s-JFx" secondAttribute="height" id="EoE-kc-C5Q"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Xtj-bj-yAt" secondAttribute="trailing" constant="12" id="Jjl-Mp-FlJ"/>
+                    <constraint firstItem="gse-G9-2Et" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="12" id="Mg0-ZT-VXQ"/>
+                    <constraint firstItem="Xtj-bj-yAt" firstAttribute="leading" secondItem="gse-G9-2Et" secondAttribute="trailing" constant="12" id="Pd6-RA-s54"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="YPl-W6-NZC" secondAttribute="trailing" constant="12" id="UnF-L7-TRB"/>
+                    <constraint firstItem="gse-G9-2Et" firstAttribute="width" secondItem="oeZ-3s-JFx" secondAttribute="width" id="acP-Db-OJg"/>
+                    <constraint firstItem="YPl-W6-NZC" firstAttribute="leading" secondItem="oeZ-3s-JFx" secondAttribute="trailing" constant="12" id="b7M-Ut-aQi"/>
+                    <constraint firstItem="Xtj-bj-yAt" firstAttribute="top" secondItem="YPl-W6-NZC" secondAttribute="bottom" constant="12" id="jH0-58-qfa"/>
+                    <constraint firstItem="Xtj-bj-yAt" firstAttribute="width" secondItem="oeZ-3s-JFx" secondAttribute="width" id="mEv-HB-b23"/>
+                    <constraint firstItem="YPl-W6-NZC" firstAttribute="height" secondItem="oeZ-3s-JFx" secondAttribute="height" id="scX-oT-eAR"/>
+                    <constraint firstItem="oeZ-3s-JFx" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="12" id="uYr-0n-Zl7"/>
+                    <constraint firstItem="oeZ-3s-JFx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="12" id="wgJ-TY-dfR"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Xtj-bj-yAt" secondAttribute="bottom" constant="12" id="xFb-NM-2CW"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="496" y="216.5"/>
+        </tableViewCell>
+    </objects>
+</document>

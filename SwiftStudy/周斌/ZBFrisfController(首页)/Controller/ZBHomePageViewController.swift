@@ -8,72 +8,105 @@
 
 import UIKit
 
-class ZBHomePageViewController: UIViewController {
+class ZBHomePageViewController: UIViewController{
+    
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationItem.title = "日常生活"
         
-        creatUI()
-        
-    }
-    
-    func creatUI(){
-        
         let tableView = UITableView.init(frame: CGRectMake(0, 0, SCREEN_W, SCREEN_H-64-49))
         
-        let image = UIImage (named: "l2cplatLogo.png")
+        tableView.delegate = self
         
-        let vImg = UIImageView(image: image);
+        tableView.dataSource = self
         
         self.view.addSubview(tableView)
         
-        tableView.addSubview(vImg)
         
-        //这里放button
-        let imageViewBtn = UIImageView.init(frame: CGRectMake(0, 180, SCREEN_W, 180))
+        tableView.registerNib(UINib(nibName:"DailyTableViewCell",bundle: nil), forCellReuseIdentifier: "DailyTableViewCell")
         
-        imageViewBtn.backgroundColor = UIColor.lightGrayColor()
+        tableView.registerNib(UINib(nibName:"JokeTableViewCell",bundle: nil), forCellReuseIdentifier: "JokeTableViewCell")
         
-        tableView.addSubview(imageViewBtn)
-        
-        
-        //这里放每日分享
-        
-        let imageView1 = UIImageView.init(frame: CGRectMake(0, 370, SCREEN_W, 250))
-        
-        imageViewBtn.backgroundColor = UIColor.lightGrayColor()
-        
-//        imageView1.backgroundColor =  UIColor.cyanColor()
-        
-        tableView.addSubview(imageView1)
-        
-        let label = UILabel.init(frame: CGRectMake(8, 8, SCREEN_W-10, 20))
-        
-        label.text = "妞 , 给 大 爷 笑 一 个 :"
-        
-        label.textColor = UIColor.redColor()
-        
-        label.font = UIFont.systemFontOfSize(17)
-        
-        imageView1.addSubview(label)
-        
-        let contentLabel = UILabel.init(frame: CGRectMake(20, 0, SCREEN_W-34, 150))
+        tableView.registerNib(UINib(nibName:"FirstTableViewCell",bundle: nil), forCellReuseIdentifier: "FirstTableViewCell")
 
-//        contentLabel.backgroundColor = UIColor.lightGrayColor()
         
-        contentLabel.textColor = UIColor.blackColor()
+    }
+ 
+}
+
+
+//MARK:tableViewDataSource
+extension ZBHomePageViewController:UITableViewDelegate,UITableViewDataSource
+{
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         
-        contentLabel.font = UIFont.systemFontOfSize(15)
+        return 3
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+       
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         
-        contentLabel.numberOfLines = 0
         
-        contentLabel.text = " 儿子中考考试考差了，被老婆骂了一顿。 我去安慰儿子：“你要努力学习,以后一定要超越爸爸”  儿子愣了一下,弱弱的来了一句：“别的我不敢保证，但是以后找个比你好的老婆还是很有把握的” "
-        
-        imageView1.addSubview(contentLabel)
+        if(indexPath.section == 0){
+            
+            return 150
+            
+        }else if (indexPath.section == 1){
+            
+            return 200
+            
+        }
+        //笑话高度
+        return 160;
         
         
     }
     
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        
+        if(section == 0){
+            
+            return 0.1
+            
+        }
+        
+        return 10
+    }
+    
+    
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+
+        if(indexPath.section == 0){
+            //加一张图片
+            let cell = tableView.dequeueReusableCellWithIdentifier("FirstTableViewCell") as! FirstTableViewCell
+            
+            return cell
+            
+        }else if (indexPath.section == 1){
+            //日常快捷入口
+            
+        let cell = tableView.dequeueReusableCellWithIdentifier("DailyTableViewCell") as! DailyTableViewCell
+            
+            return cell
+        }
+            //笑话
+            let cell1 = tableView.dequeueReusableCellWithIdentifier("JokeTableViewCell") as! JokeTableViewCell
+            
+            return cell1
+    }
+
 }
+
+
+
