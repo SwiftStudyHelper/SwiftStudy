@@ -22,6 +22,7 @@ class ZBSportNewsTableViewCell: UITableViewCell {
         
         sportTitleLabel.text = model.title
         
+        //将时间戳转化为日期
         timeLabel.text = CalculateTimeHelper.calculateTimeWithInterval(model.time)
         
     }

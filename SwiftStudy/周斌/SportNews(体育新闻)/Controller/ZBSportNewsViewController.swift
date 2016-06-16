@@ -152,13 +152,7 @@ extension ZBSportNewsViewController:UITableViewDelegate,UITableViewDataSource
         
         let Vc = ZBSportContentViewController()
         
-        let str = nsMuArray[indexPath.row].url
-        
-        var str1 = Vc.urlContent
-        
-        str1 = str
-        
-        Vc.urlContent = str1
+        Vc.urlContent = nsMuArray[indexPath.row].url
         
         self.navigationController?.pushViewController(Vc, animated: true)
 
