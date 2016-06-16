@@ -148,7 +148,9 @@ extension ZBHomePageViewController:buttonTableViewDelegate
         }
         if(btnName .isEqualToString("体育新闻")){
             
-            print("体育新闻")
+        let zbsport = ZBSportNewsViewController() as UIViewController
+            
+        self.navigationController?.pushViewController(zbsport, animated: true)
             
         }
         if(btnName .isEqualToString("健康资讯")){

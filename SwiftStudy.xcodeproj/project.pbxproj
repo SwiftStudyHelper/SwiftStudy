@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A661EAD1D12546600707ED3 /* ZBSportNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A661EAC1D12546600707ED3 /* ZBSportNewsViewController.swift */; };
+		2A661EAF1D1254A900707ED3 /* ZBSportNewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A661EAE1D1254A900707ED3 /* ZBSportNewsModel.swift */; };
+		2A661EB21D12562A00707ED3 /* ZBSportNewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A661EB01D12562A00707ED3 /* ZBSportNewsTableViewCell.swift */; };
+		2A661EB31D12562A00707ED3 /* ZBSportNewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A661EB11D12562A00707ED3 /* ZBSportNewsTableViewCell.xib */; };
+		2A661EB51D125DBB00707ED3 /* ZBSportContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A661EB41D125DBB00707ED3 /* ZBSportContentViewController.swift */; };
 		2A6E47A81D123FD800009612 /* ZhoubinJokeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3811A81D112A350096BEAE /* ZhoubinJokeTableViewCell.swift */; };
 		2A6E47A91D123FF000009612 /* ZhoubinJokeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A3811A91D112A350096BEAE /* ZhoubinJokeTableViewCell.xib */; };
 		730E2E511D12374100E90C91 /* JokeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6D18AFA1D10E2BB00705E87 /* JokeTableViewCell.xib */; };
@@ -75,6 +80,11 @@
 		2A3A684D1D0F901F008FEEE9 /* ZBHomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZBHomePageViewController.swift; sourceTree = "<group>"; };
 		2A5F878D1D10E3E8007B3980 /* DailyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyTableViewCell.swift; sourceTree = "<group>"; };
 		2A5F878E1D10E3E8007B3980 /* DailyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DailyTableViewCell.xib; sourceTree = "<group>"; };
+		2A661EAC1D12546600707ED3 /* ZBSportNewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZBSportNewsViewController.swift; sourceTree = "<group>"; };
+		2A661EAE1D1254A900707ED3 /* ZBSportNewsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZBSportNewsModel.swift; sourceTree = "<group>"; };
+		2A661EB01D12562A00707ED3 /* ZBSportNewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZBSportNewsTableViewCell.swift; sourceTree = "<group>"; };
+		2A661EB11D12562A00707ED3 /* ZBSportNewsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZBSportNewsTableViewCell.xib; sourceTree = "<group>"; };
+		2A661EB41D125DBB00707ED3 /* ZBSportContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZBSportContentViewController.swift; sourceTree = "<group>"; };
 		4F94FF96E56C33A795A1BD67 /* Pods_SwiftStudy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftStudy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		730EEBD61D0F9007008A5992 /* CalculateTimeHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculateTimeHelper.swift; sourceTree = "<group>"; };
 		733F52971D0E9BC5006F9669 /* TXHomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TXHomePageViewController.swift; sourceTree = "<group>"; };
@@ -422,9 +432,9 @@
 		2A6E47D01D12529B00009612 /* SportNews(体育新闻) */ = {
 			isa = PBXGroup;
 			children = (
+				2A6E47D31D12529B00009612 /* Other */,
 				2A6E47D11D12529B00009612 /* Controller */,
 				2A6E47D21D12529B00009612 /* Model */,
-				2A6E47D31D12529B00009612 /* Other */,
 				2A6E47D41D12529B00009612 /* View */,
 			);
 			path = "SportNews(体育新闻)";
@@ -433,6 +443,8 @@
 		2A6E47D11D12529B00009612 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				2A661EAC1D12546600707ED3 /* ZBSportNewsViewController.swift */,
+				2A661EB41D125DBB00707ED3 /* ZBSportContentViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -440,6 +452,7 @@
 		2A6E47D21D12529B00009612 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2A661EAE1D1254A900707ED3 /* ZBSportNewsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -454,6 +467,8 @@
 		2A6E47D41D12529B00009612 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2A661EB01D12562A00707ED3 /* ZBSportNewsTableViewCell.swift */,
+				2A661EB11D12562A00707ED3 /* ZBSportNewsTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -750,6 +765,7 @@
 				730E2E511D12374100E90C91 /* JokeTableViewCell.xib in Resources */,
 				737AE7371D10001A00B6C721 /* w8.png in Resources */,
 				734778881D1001400077146E /* cellBackView.png in Resources */,
+				2A661EB31D12562A00707ED3 /* ZBSportNewsTableViewCell.xib in Resources */,
 				737AE72F1D10001A00B6C721 /* w0.png in Resources */,
 				B65AD6271D027348006F3C81 /* LaunchScreen.storyboard in Resources */,
 				737AE7331D10001A00B6C721 /* w4.png in Resources */,
@@ -825,11 +841,14 @@
 				73EDA7AA1D11596A00D6C345 /* FirstTableViewCell.swift in Sources */,
 				7361F7001D10DB29006840E6 /* ZBHomePageViewController.swift in Sources */,
 				737AE7201D0FE51D00B6C721 /* CalculateTimeHelper.swift in Sources */,
+				2A661EB51D125DBB00707ED3 /* ZBSportContentViewController.swift in Sources */,
 				B62665E61D0E8D04002C7176 /* HeadlineViewController.swift in Sources */,
 				737AE71F1D0FD68900B6C721 /* WheatherModel.swift in Sources */,
+				2A661EB21D12562A00707ED3 /* ZBSportNewsTableViewCell.swift in Sources */,
 				B65AD6391D02AC3E006F3C81 /* File.swift in Sources */,
 				B6C469A31D0FD07F005E9AE6 /* BeautyGirlViewController.swift in Sources */,
 				B6C8CD5D1D0EB72600D41900 /* NewsWebViewController.swift in Sources */,
+				2A661EAD1D12546600707ED3 /* ZBSportNewsViewController.swift in Sources */,
 				737AE7161D0FB0A800B6C721 /* TXWeatherDetailCell.swift in Sources */,
 				733F52981D0E9BC5006F9669 /* TXHomePageViewController.swift in Sources */,
 				B6D18AF81D10DD9800705E87 /* collectionItemLayout.swift in Sources */,
@@ -845,6 +864,7 @@
 				B62665E01D0E6713002C7176 /* NaviBarView.swift in Sources */,
 				B6C8CD561D0E9CAA00D41900 /* HLModel.swift in Sources */,
 				B6C8CD591D0EAF0C00D41900 /* NewsCommTableViewCell.swift in Sources */,
+				2A661EAF1D1254A900707ED3 /* ZBSportNewsModel.swift in Sources */,
 				B62665DF1D0E6713002C7176 /* LYHomePageViewController.swift in Sources */,
 				B65CF36A1D116A28009DEF1B /* LYLocalImageCollectionViewCell.swift in Sources */,
 			);
