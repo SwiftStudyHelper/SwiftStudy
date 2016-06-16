@@ -44,8 +44,9 @@ class TXHomePageViewController: UIViewController ,UITableViewDelegate,UITableVie
         
         AMFHelper .BaiduGet(baiduWeatherUrl, parameters: dic, success: { (responseObject) in
             
-            print(responseObject)
-            
+//            print(responseObject)
+            let dic = JSON(responseObject)
+            print(dic["HeWeather data service 3.0"][0]["aqi"]["city"]["qlty"])
             
         }) { (error) in
             
