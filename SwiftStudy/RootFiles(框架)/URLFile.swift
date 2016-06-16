@@ -12,4 +12,7 @@ import Foundation
 
     let baiduJokeUrl = "http://apis.baidu.com/showapi_open_bus/showapi_joke/joke_text"
 
-    let baiduWeatherUrl = "http://apis.baidu.com/heweather/weather/free" 
+    let baiduWeatherUrl = "http://apis.baidu.com/heweather/weather/free"
+
+    let ZBSportNewsUrl = "http://apis.baidu.com/txapi/tiyu/tiyu"
+        

@@ -22,6 +22,8 @@ let iOS_VERSION = (UIDevice.currentDevice().systemVersion as NSString).doubleVal
 
 let BAIDUAPIKEY = "38e9683d1699b83d2145e6d55a140da7"
 
+let ZBSportNewsKey = "997df217972eab512e8d67fa09b57f9d"
+
 func RGBA(R:CGFloat,G:CGFloat,B:CGFloat,A:CGFloat)->UIColor{
     
     return UIColor(red: R/255.0, green: G/255.0, blue: B/255.0, alpha:A)
