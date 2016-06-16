@@ -45,8 +45,6 @@ class BeautyGirlViewController: UIViewController {
         
         collectionLayout?.itemSize = CGSizeMake(100, 100)
         
-        collectionLayout
-        
         PHPhotoLibrary.requestAuthorization { (PHAuthorizationStatus) in
             
             self.Lib =  PHPhotoLibrary.sharedPhotoLibrary()
