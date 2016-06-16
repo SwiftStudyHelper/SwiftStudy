@@ -62,6 +62,25 @@ class TXWeatherDetailCell: UITableViewCell {
         fl.font = UIFont.systemFontOfSize(14)
         self.addSubview(fl)
         
+        let airQltyName = UILabel(frame: CGRectMake(CGRectGetMaxX(tmp.frame) + 50, CGRectGetMaxY(flName.frame), 70, 30))
+        airQltyName.text = "空气质量"
+        airQltyName.font = UIFont.systemFontOfSize(14)
+        self.addSubview(airQltyName)
+        
+        airQlty = UILabel(frame: CGRectMake(CGRectGetMaxX(airQltyName.frame) + 10, CGRectGetMinY(airQltyName.frame), 70, 30))
+        airQlty.text = "良"
+        airQlty.font = UIFont.systemFontOfSize(14)
+        self.addSubview(airQlty)
+        
+        let windDirName = UILabel(frame: CGRectMake(CGRectGetMaxX(tmp.frame) + 50, CGRectGetMaxY(airQltyName.frame), 70, 30))
+        windDirName.text = "风       向"
+        windDirName.font = UIFont.systemFontOfSize(14)
+        self.addSubview(windDirName)
+        
+        windDir = UILabel(frame: CGRectMake(CGRectGetMaxX(windDirName.frame) + 10, CGRectGetMinY(windDirName.frame), 70, 30))
+        windDir.text = "东南风"
+        windDir.font = UIFont.systemFontOfSize(14)
+        self.addSubview(windDir)
     }
     
     required init(coder aDecoder: NSCoder) {
