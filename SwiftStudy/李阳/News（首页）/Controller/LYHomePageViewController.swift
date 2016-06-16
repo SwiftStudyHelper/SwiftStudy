@@ -17,7 +17,11 @@ class LYHomePageViewController: UIViewController{
     var newsScrollView:UIScrollView? = UIScrollView()
     
     var jokeVc:JokeViewController?
-
+    
+    var photoVc:BeautyGirlViewController?
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -85,8 +89,13 @@ class LYHomePageViewController: UIViewController{
         newsScrollView?.addSubview((jokeVc?.tableView!)!)
 
         
+        //相册
+        self.photoVc = BeautyGirlViewController()
         
+        self.photoVc?.creatUI()
         
+        newsScrollView?.addSubview((self.photoVc?.collectionView)!)
+
         
         
     }

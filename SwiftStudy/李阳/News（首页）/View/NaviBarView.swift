@@ -22,7 +22,7 @@ class NaviBarView: UIView {
     
     var redView:UIView = UIView()
     
-    let titles = ["头条","国际","科技","体育","网络","社会","美女","段子"]
+    let titles = ["头条","国际","科技","体育","网络","社会","相册","段子"]
     
     weak var delegate:NaviBarViewDelegate?
     
