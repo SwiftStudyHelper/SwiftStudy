@@ -29,12 +29,12 @@
                     </label>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="bottom" secondItem="zHj-Rl-7cJ" secondAttribute="bottom" id="37h-jK-T2R"/>
+                    <constraint firstItem="zHj-Rl-7cJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ATL-aY-7WZ"/>
                     <constraint firstAttribute="bottom" secondItem="GWe-wR-DPV" secondAttribute="bottom" constant="8" id="Gl1-Zg-U2l"/>
-                    <constraint firstItem="zHj-Rl-7cJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="VG5-6g-Eec"/>
-                    <constraint firstAttribute="trailing" secondItem="zHj-Rl-7cJ" secondAttribute="trailing" id="Y81-sr-KaK"/>
-                    <constraint firstAttribute="bottom" secondItem="zHj-Rl-7cJ" secondAttribute="bottom" id="c2e-fM-FM7"/>
-                    <constraint firstItem="zHj-Rl-7cJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="f59-3h-zx8"/>
+                    <constraint firstAttribute="trailing" secondItem="zHj-Rl-7cJ" secondAttribute="trailing" id="P3v-dg-7Gs"/>
                     <constraint firstItem="GWe-wR-DPV" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="kUF-Bo-7q3"/>
+                    <constraint firstItem="zHj-Rl-7cJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="njF-Va-i2Q"/>
                 </constraints>
             </tableViewCellContentView>
             <point key="canvasLocation" x="414" y="509.5"/>

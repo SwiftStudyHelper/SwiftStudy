@@ -10,48 +10,63 @@ import UIKit
 
 protocol  buttonTableViewDelegate:NSObjectProtocol{
     
+    func clickBtn(btnName:NSString)
 
 }
 
 class DailyTableViewCell: UITableViewCell {
-//快递
+    
+    
+    weak var delgete:buttonTableViewDelegate?
+
     @IBAction func searchCourier(sender: UIButton) {
         
-//        buttonTableViewDelegate
+        let str = "查快递"
+        
+        self.delgete?.clickBtn(str)
     }
-//体育新闻
     
     @IBAction func sportNews(sender: UIButton) {
+        
+        let str = "体育新闻"
+        
+        self.delgete?.clickBtn(str)
     }
-
-//健康
     
-    @IBAction func healthInformation(sender: UIButton) {
+    @IBAction func healthNews(sender: UIButton) {
+        
+        let str = "健康资讯"
+        
+        self.delgete?.clickBtn(str)
     }
-    
-//违章
     
     @IBAction func searchIllegal(sender: UIButton) {
+        
+        let str = "违章查询"
+        
+        self.delgete?.clickBtn(str)
     }
-    
-//苹果
     
     @IBAction func appleNews(sender: UIButton) {
+        
+        let str = "苹果新闻"
+        
+        self.delgete?.clickBtn(str)
+    }
+    
+    @IBAction func luckyStar(sender: UIButton) {
+        
+        let str = "星座运势"
+        
+        self.delgete?.clickBtn(str)
+    }
+    
+    @IBAction func changeMoney(sender: UIButton) {
+        
+        let str = "汇率转换"
+        
+        self.delgete?.clickBtn(str)
     }
 
-//星座
-    
-    @IBAction func constellation(sender: UIButton) {
-    }
-    
-//汇率
-    
-    @IBAction func change(sender: UIButton) {
-    }
-    
-//天气
-    
-    @IBAction func searchWeather(sender: UIButton) {
-    }
 
 }
