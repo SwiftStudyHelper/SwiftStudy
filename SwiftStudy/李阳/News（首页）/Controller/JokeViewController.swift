@@ -19,6 +19,11 @@ class JokeViewController: UIViewController {
     var dataSource:NSMutableArray? = NSMutableArray()
     
     var page = 1
+    
+    // 顶部刷新
+    let header = MJRefreshNormalHeader()
+    // 底部刷新
+    let footer = MJRefreshAutoNormalFooter()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +39,16 @@ class JokeViewController: UIViewController {
         tableView?.dataSource  = self
         
         tableView?.registerNib(UINib(nibName: "JokeTableViewCell", bundle: nil), forCellReuseIdentifier: "JokeTableViewCell")
+        
+        // 下拉刷新
+        header.setRefreshingTarget(self, refreshingAction: #selector(HeadlineViewController.headerRefresh))
+        // 现在的版本要用mj_header
+        self.tableView!.mj_header = header
+        
+        // 上拉刷新
+        footer.setRefreshingTarget(self, refreshingAction: #selector(HeadlineViewController.footerRefresh))
+        self.tableView!.mj_footer = footer
+
         
     }
     
@@ -60,6 +75,19 @@ class JokeViewController: UIViewController {
             
             dispatch_async(dispatch_get_main_queue(), { 
                 
+                if self.page == 1
+                {
+                    self.tableView!.mj_header.endRefreshing()
+                    
+                }
+                else
+                {
+                    
+                    self.tableView!.mj_footer.endRefreshing()
+                    
+                }
+
+                
                 self.tableView?.reloadData()
             })
             
@@ -72,7 +100,41 @@ class JokeViewController: UIViewController {
         
     }
     
+    // 顶部刷新
+    func headerRefresh(){
+        print("下拉刷新")
+        // 结束刷新
+        self.page = 1
+        
+        self.dataSource?.removeAllObjects()
+        
+        self.getDataFromNetwork()
+        
+        
+        
+    }
     
+    // 底部刷新
+    func footerRefresh(){
+        print("上拉刷新")
+        
+        self.page += 1
+        
+        if self.page > 10 {
+            
+            self.tableView!.mj_footer.endRefreshing()
+            
+            return
+            
+        }
+        
+        self.getDataFromNetwork()
+        
+        
+        
+        
+    }
+
 }
 
 extension JokeViewController:UITableViewDelegate,UITableViewDataSource
