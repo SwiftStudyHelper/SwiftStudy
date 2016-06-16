@@ -8,12 +8,19 @@
 
 import UIKit
 
+import SwiftyJSON
+
 class TXHomePageViewController: UIViewController ,UITableViewDelegate,UITableViewDataSource{
 
+    // 123
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.view.backgroundColor = UIColor.brownColor()
+        
+        let item = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Refresh, target: self, action: nil)
+        
+        self.navigationItem.rightBarButtonItem = item
      
         var myTableView = UITableView(frame: CGRectMake(0, 0, SCREEN_W, SCREEN_H - 64), style:UITableViewStyle.Grouped)
         
@@ -23,10 +30,28 @@ class TXHomePageViewController: UIViewController ,UITableViewDelegate,UITableVie
         
         myTableView.dataSource = self
         
+        self.getDataFromNetWork()
+        
 //        myTableView.backgroundColor = UIColor.whiteColor()
         
 
         // Do any additional setup after loading the view.
+    }
+    
+    func getDataFromNetWork()
+    {
+        let dic:Dictionary<String,AnyObject>  = ["city":"西安"]
+        
+        AMFHelper .BaiduGet(baiduWeatherUrl, parameters: dic, success: { (responseObject) in
+            
+            print(responseObject)
+            
+            
+        }) { (error) in
+            
+            print(error)
+            
+        }
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -34,22 +59,29 @@ class TXHomePageViewController: UIViewController ,UITableViewDelegate,UITableVie
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return 1
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 55
+        return SCREEN_H - 200
+        
+
     }
     
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 0.1
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+    }
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = UITableViewCell()
-        cell.textLabel?.text = "MyFirstSwift"
-        cell.detailTextLabel?.text = "gaga"
+        
+        var cell = TXWeatherDetailCell()
+        cell.selectionStyle = UITableViewCellSelectionStyle.None
         return cell
+        
     }
 
     override func didReceiveMemoryWarning() {
