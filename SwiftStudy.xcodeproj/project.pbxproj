@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		730E2E511D12374100E90C91 /* JokeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6D18AFA1D10E2BB00705E87 /* JokeTableViewCell.xib */; };
+		730E2E521D12374E00E90C91 /* LYLocalImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B65CF3691D116A28009DEF1B /* LYLocalImageCollectionViewCell.xib */; };
+		730E2E531D12377A00E90C91 /* DailyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A5F878E1D10E3E8007B3980 /* DailyTableViewCell.xib */; };
+		730E2E541D12377A00E90C91 /* FirstTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A38119D1D1109980096BEAE /* FirstTableViewCell.xib */; };
+		730E2E551D12377A00E90C91 /* ButtonMyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B65CF3631D112620009DEF1B /* ButtonMyTableViewCell.xib */; };
+		730E2E561D1237CB00E90C91 /* health.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2A3811A01D110B340096BEAE /* health.jpg */; };
+		730E2E571D1237CB00E90C91 /* icon_kehulianxiren.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A3811861D10F6BE0096BEAE /* icon_kehulianxiren.png */; };
+		730E2E581D1237CB00E90C91 /* icon_qiye.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A3811871D10F6BE0096BEAE /* icon_qiye.png */; };
+		730E2E591D1237CB00E90C91 /* icon_qunzu.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A3811881D10F6BE0096BEAE /* icon_qunzu.png */; };
+		730E2E5A1D1237CB00E90C91 /* icon_xiangmu2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A3811891D10F6BE0096BEAE /* icon_xiangmu2.png */; };
 		733F52981D0E9BC5006F9669 /* TXHomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733F52971D0E9BC5006F9669 /* TXHomePageViewController.swift */; };
 		734778881D1001400077146E /* cellBackView.png in Resources */ = {isa = PBXBuildFile; fileRef = 734778871D1001400077146E /* cellBackView.png */; };
 		7361F7001D10DB29006840E6 /* ZBHomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3A684D1D0F901F008FEEE9 /* ZBHomePageViewController.swift */; };
@@ -40,7 +50,6 @@
 		B65CF3641D112620009DEF1B /* ButtonMyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65CF3621D112620009DEF1B /* ButtonMyTableViewCell.swift */; };
 		B65CF3671D112684009DEF1B /* MyCustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65CF3661D112684009DEF1B /* MyCustomButton.swift */; };
 		B65CF36A1D116A28009DEF1B /* LYLocalImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65CF3681D116A28009DEF1B /* LYLocalImageCollectionViewCell.swift */; };
-		B65CF36B1D116A28009DEF1B /* LYLocalImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B65CF3691D116A28009DEF1B /* LYLocalImageCollectionViewCell.xib */; };
 		B69B2E441D07A43F00FF4DA0 /* ZKQHomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69B2E431D07A43F00FF4DA0 /* ZKQHomePageViewController.swift */; };
 		B6C469A31D0FD07F005E9AE6 /* BeautyGirlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C469A21D0FD07F005E9AE6 /* BeautyGirlViewController.swift */; };
 		B6C8CD561D0E9CAA00D41900 /* HLModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C8CD551D0E9CAA00D41900 /* HLModel.swift */; };
@@ -450,6 +459,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				730E2E561D1237CB00E90C91 /* health.jpg in Resources */,
+				730E2E571D1237CB00E90C91 /* icon_kehulianxiren.png in Resources */,
+				730E2E581D1237CB00E90C91 /* icon_qiye.png in Resources */,
+				730E2E591D1237CB00E90C91 /* icon_qunzu.png in Resources */,
+				730E2E5A1D1237CB00E90C91 /* icon_xiangmu2.png in Resources */,
+				730E2E531D12377A00E90C91 /* DailyTableViewCell.xib in Resources */,
+				730E2E541D12377A00E90C91 /* FirstTableViewCell.xib in Resources */,
+				730E2E551D12377A00E90C91 /* ButtonMyTableViewCell.xib in Resources */,
+				730E2E521D12374E00E90C91 /* LYLocalImageCollectionViewCell.xib in Resources */,
+				730E2E511D12374100E90C91 /* JokeTableViewCell.xib in Resources */,
 				737AE7371D10001A00B6C721 /* w8.png in Resources */,
 				734778881D1001400077146E /* cellBackView.png in Resources */,
 				737AE72F1D10001A00B6C721 /* w0.png in Resources */,
