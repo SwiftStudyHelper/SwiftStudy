@@ -92,7 +92,9 @@ class LYHomePageViewController: UIViewController{
         //相册
         self.photoVc = BeautyGirlViewController()
         
-        self.photoVc?.creatUI()
+        self.photoVc?.createUI()
+        
+        self.photoVc?.setData()
         
         newsScrollView?.addSubview((self.photoVc?.collectionView)!)
 

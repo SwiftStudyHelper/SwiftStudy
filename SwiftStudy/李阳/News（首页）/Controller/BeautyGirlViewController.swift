@@ -1,117 +1,156 @@
-//
-//  BeautyGirlViewController.swift
-//  SwiftStudy
-//
-//  Created by liyang@l2cplat.com on 16/6/14.
-//  Copyright © 2016年 yang_li828@163.com. All rights reserved.
-//
-
 import UIKit
 import Photos
-import AssetsLibrary
 
-
-class BeautyGirlViewController: UIViewController {
+class BeautyGirlViewController:UIViewController {
     
     var collectionView:UICollectionView?
-
-    //资源库管理类
-    var Lib:PHPhotoLibrary?
     
-    var assets = [ALAsset]()
+    var layout:WaterfallLayout?
     
-    var assetsLibrary = ALAssetsLibrary()
-
-    var collectionLayout:UICollectionViewFlowLayout? =  UICollectionViewFlowLayout()
-        //保存照片集合
-
-
+    var allPhotos:PHFetchResult?
+    
+    var photoManager:PHCachingImageManager?
+    
+    var datasource = [CellModel]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+//        createUI() //初始化界面
+//        
+//        
+//        setData() //初始化数据
         
     }
     
-    func creatUI() {
+    func setData() {
         
-        self.collectionView = UICollectionView(frame: CGRectMake(SCREEN_W*6, 0, SCREEN_W, SCREEN_H-Navi_H-Bar_H), collectionViewLayout: collectionLayout!)
+        let options = PHFetchOptions()
+        // 按图片生成时间排序
+        options.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
         
-        self.collectionView?.delegate = self;
+        allPhotos = PHAsset.fetchAssetsWithMediaType(PHAssetMediaType.Image, options: options)
         
-        self.collectionView?.dataSource = self;
+        photoManager = PHCachingImageManager()
         
-        
-        self.collectionView?.registerNib(UINib(nibName: "LYLocalImageCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "LYLocalImageCollectionViewCell")
-        
-        collectionLayout?.itemSize = CGSizeMake(100, 100)
-        
-        PHPhotoLibrary.requestAuthorization { (PHAuthorizationStatus) in
+        allPhotos?.enumerateObjectsUsingBlock({ (object:AnyObject!, count:Int, stop:UnsafeMutablePointer<ObjCBool>) in
             
-            self.Lib =  PHPhotoLibrary.sharedPhotoLibrary()
-
-        }
-        
-        assetsLibrary.enumerateGroupsWithTypes(ALAssetsGroupSavedPhotos, usingBlock: { (group: ALAssetsGroup!, stop) in
-            
-            if group != nil
-            {
-                let assetBlock : ALAssetsGroupEnumerationResultsBlock = {
-                    (result: ALAsset!, index: Int, stop) in
-                    if result != nil
-                    {
-                        self.assets.append(result)
-                    }
-                }
-                group.enumerateAssetsUsingBlock(assetBlock)
+            if object is PHAsset{
                 
-                print(self.assets.count)
-                //collectionView网格重载数据
-                self.collectionView?.reloadData()
+                let asset = object as! PHAsset
+                
+                let model = CellModel()
+                
+                model.image = asset
+                
+                model.w = CGFloat(asset.pixelWidth)
+                
+                model.h = CGFloat(asset.pixelHeight)
+                
+                let dateFormatter = NSDateFormatter()
+                
+                dateFormatter.dateFormat = "MM-dd-yyyy"
+                
+                model.name = dateFormatter.stringFromDate(asset.modificationDate!)
+                
+                let itemW = (self.collectionView?.frame.width)! / (self.layout?.columnCount)!
+                
+                let itemH = itemW * (CGFloat(asset.pixelHeight)/CGFloat(asset.pixelWidth))
+                
+                let imageSize = CGSize(width: itemW,
+                    height: itemH)
+                
+                /* For faster performance, and maybe degraded image */
+                let options = PHImageRequestOptions()
+                
+                options.deliveryMode = .FastFormat
+                
+                options.synchronous = true
+                
+                self.photoManager?.requestImageForAsset(asset, targetSize: imageSize, contentMode: PHImageContentMode.AspectFit, options: options, resultHandler: { (image, info) in
+                    
+                    model.smallImage = image!
+                    
+                    self.datasource.append(model)
+                    
+                    print(model.name)
+                    
+                })
             }
             
-            }) { (err) in
-                
-        }
-        
-
-        
-
+        })
         
     }
-
+    
+    func createUI() {
+        
+        
+        
+        
+        //初始化colletionView
+        
+        layout = WaterfallLayout()
+        
+        collectionView = UICollectionView(frame: CGRectMake(SCREEN_W*6, 0, SCREEN_W, SCREEN_H-Navi_H-Bar_H), collectionViewLayout: layout!)
+        
+        collectionView?.backgroundColor = UIColor.whiteColor()
+        
+        collectionView?.registerNib(UINib(nibName: "CustomCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CustomCollectionViewCell")
+        
+        collectionView?.dataSource = self
+        
+        layout!.columnCount = 3
+        
+        layout!.columnMargin = 10
+        
+        layout!.rowMargin = 10
+        
+        layout!.edge = UIEdgeInsetsMake(10, 10, 10, 10)
+        
+        layout?.delegate = self
+        
+        self.view.addSubview(collectionView!)
+        
+        
+        
+    }
+    
     
 }
 
-extension BeautyGirlViewController:UICollectionViewDelegate,UICollectionViewDataSource
+extension BeautyGirlViewController:UICollectionViewDataSource
 {
-
+    
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
-        return self.assets.count
+        return self.datasource.count
     }
+    
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell
     {
-        let cell = (collectionView.dequeueReusableCellWithReuseIdentifier("LYLocalImageCollectionViewCell", forIndexPath: indexPath) as! LYLocalImageCollectionViewCell)
         
-//        let myAsset = self.assets[indexPath.item]
-//        
-//        let image = UIImage(CGImage:myAsset.thumbnail().takeUnretainedValue())
+        let cell = (collectionView.dequeueReusableCellWithReuseIdentifier("CustomCollectionViewCell", forIndexPath: indexPath) as! CustomCollectionViewCell)
         
-        
-        //获取原图
-        let representation =  self.assets[indexPath.item].defaultRepresentation()
-        
-        let imageBuffer = UnsafeMutablePointer<UInt8>.alloc(Int(representation.size()))
-        let bufferSize = representation.getBytes(imageBuffer, fromOffset: Int64(0),
-                                                 length: Int(representation.size()), error: nil)
-        let data =  NSData(bytesNoCopy:imageBuffer ,length:bufferSize, freeWhenDone:true)
-        cell.imgView.image = UIImage(data: data)
+        cell.refreshCellWithModle(self.datasource[indexPath.row])
         
         return cell
-    
     }
+    
+    
+}
 
-
-
+extension BeautyGirlViewController:WaterfallLayoutdelegate
+{
+    
+    func waterlayout(layout:WaterfallLayout,index:NSInteger,itemWidth:CGFloat) -> CGFloat
+    {
+        
+        
+        let model = self.datasource[index]
+        
+        return  itemWidth*model.h/model.w
+        
+    }
+    
 }
