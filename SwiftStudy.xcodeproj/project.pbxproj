@@ -7,10 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A661EAD1D12546600707ED3 /* ZBSportNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A661EAC1D12546600707ED3 /* ZBSportNewsViewController.swift */; };
+		2A661EAF1D1254A900707ED3 /* ZBSportNewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A661EAE1D1254A900707ED3 /* ZBSportNewsModel.swift */; };
+		2A661EB21D12562A00707ED3 /* ZBSportNewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A661EB01D12562A00707ED3 /* ZBSportNewsTableViewCell.swift */; };
+		2A661EB31D12562A00707ED3 /* ZBSportNewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A661EB11D12562A00707ED3 /* ZBSportNewsTableViewCell.xib */; };
+		2A661EB51D125DBB00707ED3 /* ZBSportContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A661EB41D125DBB00707ED3 /* ZBSportContentViewController.swift */; };
+		2A6E47A81D123FD800009612 /* ZhoubinJokeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3811A81D112A350096BEAE /* ZhoubinJokeTableViewCell.swift */; };
+		2A6E47A91D123FF000009612 /* ZhoubinJokeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A3811A91D112A350096BEAE /* ZhoubinJokeTableViewCell.xib */; };
 		730E2E511D12374100E90C91 /* JokeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6D18AFA1D10E2BB00705E87 /* JokeTableViewCell.xib */; };
 		730E2E531D12377A00E90C91 /* DailyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A5F878E1D10E3E8007B3980 /* DailyTableViewCell.xib */; };
 		730E2E541D12377A00E90C91 /* FirstTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A38119D1D1109980096BEAE /* FirstTableViewCell.xib */; };
-		730E2E551D12377A00E90C91 /* ButtonMyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B65CF3631D112620009DEF1B /* ButtonMyTableViewCell.xib */; };
 		730E2E561D1237CB00E90C91 /* health.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2A3811A01D110B340096BEAE /* health.jpg */; };
 		730E2E571D1237CB00E90C91 /* icon_kehulianxiren.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A3811861D10F6BE0096BEAE /* icon_kehulianxiren.png */; };
 		730E2E581D1237CB00E90C91 /* icon_qiye.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A3811871D10F6BE0096BEAE /* icon_qiye.png */; };
@@ -71,9 +77,17 @@
 		2A38119C1D1109980096BEAE /* FirstTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstTableViewCell.swift; sourceTree = "<group>"; };
 		2A38119D1D1109980096BEAE /* FirstTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstTableViewCell.xib; sourceTree = "<group>"; };
 		2A3811A01D110B340096BEAE /* health.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = health.jpg; sourceTree = "<group>"; };
+		2A3811A81D112A350096BEAE /* ZhoubinJokeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZhoubinJokeTableViewCell.swift; sourceTree = "<group>"; };
+		2A3811A91D112A350096BEAE /* ZhoubinJokeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZhoubinJokeTableViewCell.xib; sourceTree = "<group>"; };
+		2A3811AC1D1154810096BEAE /* ZhoubinJokeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZhoubinJokeModel.swift; path = "SwiftStudy/周斌/ZBFrisfController(首页)/View/ZhoubinJokeModel.swift"; sourceTree = SOURCE_ROOT; };
 		2A3A684D1D0F901F008FEEE9 /* ZBHomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZBHomePageViewController.swift; sourceTree = "<group>"; };
 		2A5F878D1D10E3E8007B3980 /* DailyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyTableViewCell.swift; sourceTree = "<group>"; };
 		2A5F878E1D10E3E8007B3980 /* DailyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DailyTableViewCell.xib; sourceTree = "<group>"; };
+		2A661EAC1D12546600707ED3 /* ZBSportNewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZBSportNewsViewController.swift; sourceTree = "<group>"; };
+		2A661EAE1D1254A900707ED3 /* ZBSportNewsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZBSportNewsModel.swift; sourceTree = "<group>"; };
+		2A661EB01D12562A00707ED3 /* ZBSportNewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZBSportNewsTableViewCell.swift; sourceTree = "<group>"; };
+		2A661EB11D12562A00707ED3 /* ZBSportNewsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZBSportNewsTableViewCell.xib; sourceTree = "<group>"; };
+		2A661EB41D125DBB00707ED3 /* ZBSportContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZBSportContentViewController.swift; sourceTree = "<group>"; };
 		4F94FF96E56C33A795A1BD67 /* Pods_SwiftStudy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftStudy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		730EEBD61D0F9007008A5992 /* CalculateTimeHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculateTimeHelper.swift; sourceTree = "<group>"; };
 		733F52971D0E9BC5006F9669 /* TXHomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TXHomePageViewController.swift; sourceTree = "<group>"; };
@@ -170,6 +184,7 @@
 		2A3A684B1D0F8FFE008FEEE9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2A3811AC1D1154810096BEAE /* ZhoubinJokeModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -181,9 +196,286 @@
 				2A5F878E1D10E3E8007B3980 /* DailyTableViewCell.xib */,
 				2A38119C1D1109980096BEAE /* FirstTableViewCell.swift */,
 				2A38119D1D1109980096BEAE /* FirstTableViewCell.xib */,
-				B65CF3621D112620009DEF1B /* ButtonMyTableViewCell.swift */,
-				B65CF3631D112620009DEF1B /* ButtonMyTableViewCell.xib */,
-				B65CF3661D112684009DEF1B /* MyCustomButton.swift */,
+				2A3811A81D112A350096BEAE /* ZhoubinJokeTableViewCell.swift */,
+				2A3811A91D112A350096BEAE /* ZhoubinJokeTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2A6E47B21D12529B00009612 /* AppleNews(苹果新闻) */ = {
+			isa = PBXGroup;
+			children = (
+				2A6E47B31D12529B00009612 /* Controller */,
+				2A6E47B41D12529B00009612 /* Model */,
+				2A6E47B51D12529B00009612 /* Other */,
+				2A6E47B61D12529B00009612 /* View */,
+			);
+			path = "AppleNews(苹果新闻)";
+			sourceTree = "<group>";
+		};
+		2A6E47B31D12529B00009612 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2A6E47B41D12529B00009612 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2A6E47B51D12529B00009612 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		2A6E47B61D12529B00009612 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2A6E47B71D12529B00009612 /* ChangeMoney(汇率转换) */ = {
+			isa = PBXGroup;
+			children = (
+				2A6E47B81D12529B00009612 /* Controller */,
+				2A6E47B91D12529B00009612 /* Model */,
+				2A6E47BA1D12529B00009612 /* Other */,
+				2A6E47BB1D12529B00009612 /* View */,
+			);
+			path = "ChangeMoney(汇率转换)";
+			sourceTree = "<group>";
+		};
+		2A6E47B81D12529B00009612 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2A6E47B91D12529B00009612 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2A6E47BA1D12529B00009612 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		2A6E47BB1D12529B00009612 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2A6E47BC1D12529B00009612 /* HealthNews(健康资讯) */ = {
+			isa = PBXGroup;
+			children = (
+				2A6E47BD1D12529B00009612 /* Controller */,
+				2A6E47BE1D12529B00009612 /* Model */,
+				2A6E47BF1D12529B00009612 /* Other */,
+				2A6E47C01D12529B00009612 /* View */,
+			);
+			path = "HealthNews(健康资讯)";
+			sourceTree = "<group>";
+		};
+		2A6E47BD1D12529B00009612 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2A6E47BE1D12529B00009612 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2A6E47BF1D12529B00009612 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		2A6E47C01D12529B00009612 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2A6E47C11D12529B00009612 /* LuckyStar(星座运势) */ = {
+			isa = PBXGroup;
+			children = (
+				2A6E47C21D12529B00009612 /* Controller */,
+				2A6E47C31D12529B00009612 /* Model */,
+				2A6E47C41D12529B00009612 /* Other */,
+				2A6E47C51D12529B00009612 /* View */,
+			);
+			path = "LuckyStar(星座运势)";
+			sourceTree = "<group>";
+		};
+		2A6E47C21D12529B00009612 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2A6E47C31D12529B00009612 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2A6E47C41D12529B00009612 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		2A6E47C51D12529B00009612 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2A6E47C61D12529B00009612 /* SearchCourier(快递) */ = {
+			isa = PBXGroup;
+			children = (
+				2A6E47C71D12529B00009612 /* Controller */,
+				2A6E47C81D12529B00009612 /* Model */,
+				2A6E47C91D12529B00009612 /* Other */,
+				2A6E47CA1D12529B00009612 /* View */,
+			);
+			path = "SearchCourier(快递)";
+			sourceTree = "<group>";
+		};
+		2A6E47C71D12529B00009612 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2A6E47C81D12529B00009612 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2A6E47C91D12529B00009612 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		2A6E47CA1D12529B00009612 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2A6E47CB1D12529B00009612 /* SearchIllegal(违章查询) */ = {
+			isa = PBXGroup;
+			children = (
+				2A6E47CC1D12529B00009612 /* Controller */,
+				2A6E47CD1D12529B00009612 /* Model */,
+				2A6E47CE1D12529B00009612 /* Other */,
+				2A6E47CF1D12529B00009612 /* View */,
+			);
+			path = "SearchIllegal(违章查询)";
+			sourceTree = "<group>";
+		};
+		2A6E47CC1D12529B00009612 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2A6E47CD1D12529B00009612 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2A6E47CE1D12529B00009612 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		2A6E47CF1D12529B00009612 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2A6E47D01D12529B00009612 /* SportNews(体育新闻) */ = {
+			isa = PBXGroup;
+			children = (
+				2A6E47D31D12529B00009612 /* Other */,
+				2A6E47D11D12529B00009612 /* Controller */,
+				2A6E47D21D12529B00009612 /* Model */,
+				2A6E47D41D12529B00009612 /* View */,
+			);
+			path = "SportNews(体育新闻)";
+			sourceTree = "<group>";
+		};
+		2A6E47D11D12529B00009612 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2A661EAC1D12546600707ED3 /* ZBSportNewsViewController.swift */,
+				2A661EB41D125DBB00707ED3 /* ZBSportContentViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2A6E47D21D12529B00009612 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2A661EAE1D1254A900707ED3 /* ZBSportNewsModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2A6E47D31D12529B00009612 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		2A6E47D41D12529B00009612 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2A661EB01D12562A00707ED3 /* ZBSportNewsTableViewCell.swift */,
+				2A661EB11D12562A00707ED3 /* ZBSportNewsTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -350,6 +642,13 @@
 		B69B2E3F1D07A3B400FF4DA0 /* 周斌 */ = {
 			isa = PBXGroup;
 			children = (
+				2A6E47B21D12529B00009612 /* AppleNews(苹果新闻) */,
+				2A6E47B71D12529B00009612 /* ChangeMoney(汇率转换) */,
+				2A6E47BC1D12529B00009612 /* HealthNews(健康资讯) */,
+				2A6E47C11D12529B00009612 /* LuckyStar(星座运势) */,
+				2A6E47C61D12529B00009612 /* SearchCourier(快递) */,
+				2A6E47CB1D12529B00009612 /* SearchIllegal(违章查询) */,
+				2A6E47D01D12529B00009612 /* SportNews(体育新闻) */,
 				2A3A68481D0F8FFE008FEEE9 /* ZBFrisfController(首页) */,
 			);
 			path = "周斌";
@@ -462,6 +761,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A6E47A91D123FF000009612 /* ZhoubinJokeTableViewCell.xib in Resources */,
 				730E2E561D1237CB00E90C91 /* health.jpg in Resources */,
 				730E2E571D1237CB00E90C91 /* icon_kehulianxiren.png in Resources */,
 				730E2E581D1237CB00E90C91 /* icon_qiye.png in Resources */,
@@ -474,6 +774,7 @@
 				730E2E511D12374100E90C91 /* JokeTableViewCell.xib in Resources */,
 				737AE7371D10001A00B6C721 /* w8.png in Resources */,
 				734778881D1001400077146E /* cellBackView.png in Resources */,
+				2A661EB31D12562A00707ED3 /* ZBSportNewsTableViewCell.xib in Resources */,
 				737AE72F1D10001A00B6C721 /* w0.png in Resources */,
 				B65AD6271D027348006F3C81 /* LaunchScreen.storyboard in Resources */,
 				737AE7331D10001A00B6C721 /* w4.png in Resources */,
@@ -544,18 +845,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A6E47A81D123FD800009612 /* ZhoubinJokeTableViewCell.swift in Sources */,
 				73EDA7AB1D11597200D6C345 /* DailyTableViewCell.swift in Sources */,
 				73EDA7AA1D11596A00D6C345 /* FirstTableViewCell.swift in Sources */,
 				7361F7001D10DB29006840E6 /* ZBHomePageViewController.swift in Sources */,
 				737AE7201D0FE51D00B6C721 /* CalculateTimeHelper.swift in Sources */,
+				2A661EB51D125DBB00707ED3 /* ZBSportContentViewController.swift in Sources */,
 				B62665E61D0E8D04002C7176 /* HeadlineViewController.swift in Sources */,
 				B6225B671D13F52A00325417 /* CustomCollectionViewCell.swift in Sources */,
 				737AE71F1D0FD68900B6C721 /* WheatherModel.swift in Sources */,
+				2A661EB21D12562A00707ED3 /* ZBSportNewsTableViewCell.swift in Sources */,
 				B65AD6391D02AC3E006F3C81 /* File.swift in Sources */,
-				B65CF3671D112684009DEF1B /* MyCustomButton.swift in Sources */,
-				B65CF3641D112620009DEF1B /* ButtonMyTableViewCell.swift in Sources */,
 				B6C469A31D0FD07F005E9AE6 /* BeautyGirlViewController.swift in Sources */,
 				B6C8CD5D1D0EB72600D41900 /* NewsWebViewController.swift in Sources */,
+				2A661EAD1D12546600707ED3 /* ZBSportNewsViewController.swift in Sources */,
 				737AE7161D0FB0A800B6C721 /* TXWeatherDetailCell.swift in Sources */,
 				733F52981D0E9BC5006F9669 /* TXHomePageViewController.swift in Sources */,
 				B62665CE1D0E4440002C7176 /* URLFile.swift in Sources */,
@@ -572,6 +875,7 @@
 				B62665E01D0E6713002C7176 /* NaviBarView.swift in Sources */,
 				B6C8CD561D0E9CAA00D41900 /* HLModel.swift in Sources */,
 				B6C8CD591D0EAF0C00D41900 /* NewsCommTableViewCell.swift in Sources */,
+				2A661EAF1D1254A900707ED3 /* ZBSportNewsModel.swift in Sources */,
 				B62665DF1D0E6713002C7176 /* LYHomePageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

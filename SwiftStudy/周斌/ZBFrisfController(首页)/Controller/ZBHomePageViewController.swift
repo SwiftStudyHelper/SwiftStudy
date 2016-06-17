@@ -30,7 +30,7 @@ class ZBHomePageViewController: UIViewController{
         
         tableView.registerNib(UINib(nibName:"DailyTableViewCell",bundle: nil), forCellReuseIdentifier: "DailyTableViewCell")
         
-        tableView.registerNib(UINib(nibName:"JokeTableViewCell",bundle: nil), forCellReuseIdentifier: "JokeTableViewCell")
+        tableView.registerNib(UINib(nibName:"ZhoubinJokeTableViewCell",bundle: nil), forCellReuseIdentifier: "ZhoubinJokeTableViewCell")
         
         tableView.registerNib(UINib(nibName:"FirstTableViewCell",bundle: nil), forCellReuseIdentifier: "FirstTableViewCell")
 
@@ -63,7 +63,7 @@ extension ZBHomePageViewController:UITableViewDelegate,UITableViewDataSource
             
         }else if (indexPath.section == 1){
             
-            return 200
+            return 265
             
         }
         //笑话高度
@@ -80,7 +80,7 @@ extension ZBHomePageViewController:UITableViewDelegate,UITableViewDataSource
             
         }
         
-        return 10
+        return 5
     }
     
     
@@ -98,15 +98,91 @@ extension ZBHomePageViewController:UITableViewDelegate,UITableViewDataSource
             
         let cell = tableView.dequeueReusableCellWithIdentifier("DailyTableViewCell") as! DailyTableViewCell
             
+            cell.delgete = self
+            
             return cell
         }
             //笑话
-            let cell1 = tableView.dequeueReusableCellWithIdentifier("JokeTableViewCell") as! JokeTableViewCell
+            let cell1 = tableView.dequeueReusableCellWithIdentifier("ZhoubinJokeTableViewCell") as! ZhoubinJokeTableViewCell
             
             return cell1
     }
+    
+//    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+//        if indexPath.section == 1 {
+//            
+//            let cell1 = cell as! DailyTableViewCell
+//            
+//            for bt  in cell1.contentView.subviews {
+//                
+//              
+//                for bu in bt.subviews {
+//                    if bu.isKindOfClass(UIButton) {
+//                        
+//                    switch bt.tag {
+//                      case 201:
+//                       print(111)
+//                    default:
+//                       print(22)
+//                                            }
+//                    }
+//                }
+//                
+//            }
+//        }
+//        
+//    }
 
 }
 
+
+extension ZBHomePageViewController:buttonTableViewDelegate
+{
+
+    func clickBtn(btnName:NSString)
+    {
+        if(btnName .isEqualToString("查快递")){
+        
+            print("查快递")
+        
+        }
+        if(btnName .isEqualToString("体育新闻")){
+            
+        let zbsport = ZBSportNewsViewController() as UIViewController
+            
+        self.navigationController?.pushViewController(zbsport, animated: true)
+            
+        }
+        if(btnName .isEqualToString("健康资讯")){
+            
+            print("健康资讯")
+            
+        }
+        if(btnName .isEqualToString("违章查询")){
+            
+            print("违章查询")
+            
+        }
+        if(btnName .isEqualToString("苹果新闻")){
+            
+            print("苹果新闻")
+            
+        }
+        if(btnName .isEqualToString("星座运势")){
+            
+            print("星座运势")
+            
+        }
+        if(btnName .isEqualToString("汇率转换")){
+            
+            print("汇率转换")
+            
+        }
+        
+        
+    }
+    
+
+}
 
 
