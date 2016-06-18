@@ -14,6 +14,7 @@
 		2A661EB51D125DBB00707ED3 /* ZBSportContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A661EB41D125DBB00707ED3 /* ZBSportContentViewController.swift */; };
 		2A6E47A81D123FD800009612 /* ZhoubinJokeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3811A81D112A350096BEAE /* ZhoubinJokeTableViewCell.swift */; };
 		2A6E47A91D123FF000009612 /* ZhoubinJokeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A3811A91D112A350096BEAE /* ZhoubinJokeTableViewCell.xib */; };
+		2A6FC4FF1D15395300FADCDA /* ChangeMoneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6FC4FE1D15395300FADCDA /* ChangeMoneyViewController.swift */; };
 		730E2E511D12374100E90C91 /* JokeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6D18AFA1D10E2BB00705E87 /* JokeTableViewCell.xib */; };
 		730E2E531D12377A00E90C91 /* DailyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A5F878E1D10E3E8007B3980 /* DailyTableViewCell.xib */; };
 		730E2E541D12377A00E90C91 /* FirstTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A38119D1D1109980096BEAE /* FirstTableViewCell.xib */; };
@@ -87,6 +88,7 @@
 		2A661EB01D12562A00707ED3 /* ZBSportNewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZBSportNewsTableViewCell.swift; sourceTree = "<group>"; };
 		2A661EB11D12562A00707ED3 /* ZBSportNewsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZBSportNewsTableViewCell.xib; sourceTree = "<group>"; };
 		2A661EB41D125DBB00707ED3 /* ZBSportContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZBSportContentViewController.swift; sourceTree = "<group>"; };
+		2A6FC4FE1D15395300FADCDA /* ChangeMoneyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeMoneyViewController.swift; sourceTree = "<group>"; };
 		4F94FF96E56C33A795A1BD67 /* Pods_SwiftStudy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftStudy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		730EEBD61D0F9007008A5992 /* CalculateTimeHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculateTimeHelper.swift; sourceTree = "<group>"; };
 		733F52971D0E9BC5006F9669 /* TXHomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TXHomePageViewController.swift; sourceTree = "<group>"; };
@@ -252,6 +254,7 @@
 		2A6E47B81D12529B00009612 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				2A6FC4FE1D15395300FADCDA /* ChangeMoneyViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -869,6 +872,7 @@
 				733F52981D0E9BC5006F9669 /* TXHomePageViewController.swift in Sources */,
 				B62665CE1D0E4440002C7176 /* URLFile.swift in Sources */,
 				B6225B631D13F4DB00325417 /* WaterfallLayout.swift in Sources */,
+				2A6FC4FF1D15395300FADCDA /* ChangeMoneyViewController.swift in Sources */,
 				B69B2E441D07A43F00FF4DA0 /* ZKQHomePageViewController.swift in Sources */,
 				7382EFC01D0E53AC0090B268 /* Model.swift in Sources */,
 				B65AD6321D0289DF006F3C81 /* TabBarController.swift in Sources */,

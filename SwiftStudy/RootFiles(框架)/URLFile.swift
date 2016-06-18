@@ -15,4 +15,6 @@ import Foundation
     let baiduWeatherUrl = "http://apis.baidu.com/heweather/weather/free"
 
     let ZBSportNewsUrl = "http://apis.baidu.com/txapi/tiyu/tiyu"
+
+    let ZBChangeMoneyUrl = "http://apis.baidu.com/apistore/currencyservice/type"
         
