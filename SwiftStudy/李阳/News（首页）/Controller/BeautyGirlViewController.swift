@@ -1,117 +1,174 @@
-//
-//  BeautyGirlViewController.swift
-//  SwiftStudy
-//
-//  Created by liyang@l2cplat.com on 16/6/14.
-//  Copyright © 2016年 yang_li828@163.com. All rights reserved.
-//
-
 import UIKit
 import Photos
-import AssetsLibrary
 
-
-class BeautyGirlViewController: UIViewController {
+protocol BeautyGirlViewControllerDelegate :NSObjectProtocol{
     
-    var collectionView:UICollectionView?
-
-    //资源库管理类
-    var Lib:PHPhotoLibrary?
-    
-    var assets = [ALAsset]()
-    
-    var assetsLibrary = ALAssetsLibrary()
-
-    var collectionLayout:UICollectionViewFlowLayout? =  UICollectionViewFlowLayout()
-        //保存照片集合
-
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        
-    }
-    
-    func creatUI() {
-        
-        self.collectionView = UICollectionView(frame: CGRectMake(SCREEN_W*6, 0, SCREEN_W, SCREEN_H-Navi_H-Bar_H), collectionViewLayout: collectionLayout!)
-        
-        self.collectionView?.delegate = self;
-        
-        self.collectionView?.dataSource = self;
-        
-        
-        self.collectionView?.registerNib(UINib(nibName: "LYLocalImageCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "LYLocalImageCollectionViewCell")
-        
-        collectionLayout?.itemSize = CGSizeMake(100, 100)
-        
-        PHPhotoLibrary.requestAuthorization { (PHAuthorizationStatus) in
-            
-            self.Lib =  PHPhotoLibrary.sharedPhotoLibrary()
-
-        }
-        
-        assetsLibrary.enumerateGroupsWithTypes(ALAssetsGroupSavedPhotos, usingBlock: { (group: ALAssetsGroup!, stop) in
-            
-            if group != nil
-            {
-                let assetBlock : ALAssetsGroupEnumerationResultsBlock = {
-                    (result: ALAsset!, index: Int, stop) in
-                    if result != nil
-                    {
-                        self.assets.append(result)
-                    }
-                }
-                group.enumerateAssetsUsingBlock(assetBlock)
-                
-                print(self.assets.count)
-                //collectionView网格重载数据
-                self.collectionView?.reloadData()
-            }
-            
-            }) { (err) in
-                
-        }
-        
-
-        
-
-        
-    }
-
+    func clickItem(size:CGSize,model:CellModel)
     
 }
 
-extension BeautyGirlViewController:UICollectionViewDelegate,UICollectionViewDataSource
-{
 
+class BeautyGirlViewController:UIViewController {
+    
+    var collectionView:UICollectionView?
+    
+    var layout:WaterfallLayout?
+    
+    var allPhotos:PHFetchResult?
+    
+    var photoManager:PHCachingImageManager?
+    
+    var datasource = [CellModel]()
+    
+    weak var delegate:BeautyGirlViewControllerDelegate?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        
+    }
+    
+    func setData() {
+        
+        let options = PHFetchOptions()
+        // 按图片生成时间排序
+        options.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
+        
+        allPhotos = PHAsset.fetchAssetsWithMediaType(PHAssetMediaType.Image, options: options)
+        
+        photoManager = PHCachingImageManager()
+        
+        allPhotos?.enumerateObjectsUsingBlock({ (object:AnyObject!, count:Int, stop:UnsafeMutablePointer<ObjCBool>) in
+            
+            if object is PHAsset{
+                
+                let asset = object as! PHAsset
+                
+                let model = CellModel()
+                
+                model.image = asset
+                
+                model.w = CGFloat(asset.pixelWidth)
+                
+                model.h = CGFloat(asset.pixelHeight)
+                
+                let dateFormatter = NSDateFormatter()
+                
+                dateFormatter.dateFormat = "MM-dd-yyyy"
+                
+                model.name = dateFormatter.stringFromDate(asset.modificationDate!)
+                
+                let itemW = (self.collectionView?.frame.width)! / (self.layout?.columnCount)!
+                
+                let itemH = itemW * (CGFloat(asset.pixelHeight)/CGFloat(asset.pixelWidth))
+                
+                let imageSize = CGSize(width: itemW,
+                    height: itemH)
+                
+                /* For faster performance, and maybe degraded image */
+                let options = PHImageRequestOptions()
+                
+                options.deliveryMode = .FastFormat
+                
+                options.synchronous = true
+                
+                self.photoManager?.requestImageForAsset(asset, targetSize: imageSize, contentMode: PHImageContentMode.AspectFit, options: options, resultHandler: { (image, info) in
+                    
+                    model.smallImage = image!
+                    
+                    self.datasource.append(model)
+                    
+                    print(model.name)
+                    
+                })
+            }
+            
+        })
+        
+    }
+    
+    func createUI() {
+        
+        
+        
+        
+        //初始化colletionView
+        
+        layout = WaterfallLayout()
+        
+        collectionView = UICollectionView(frame: CGRectMake(SCREEN_W*6, 0, SCREEN_W, SCREEN_H-Navi_H-Bar_H), collectionViewLayout: layout!)
+        
+        collectionView?.backgroundColor = UIColor.whiteColor()
+        
+        collectionView?.registerNib(UINib(nibName: "CustomCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CustomCollectionViewCell")
+        
+        collectionView?.dataSource = self
+        
+        collectionView?.delegate = self
+        
+        layout!.columnCount = 3
+        
+        layout!.columnMargin = 10
+        
+        layout!.rowMargin = 10
+        
+        layout!.edge = UIEdgeInsetsMake(10, 10, 10, 10)
+        
+        layout?.delegate = self
+        
+        self.view.addSubview(collectionView!)
+        
+        
+        
+    }
+    
+    
+}
+
+extension BeautyGirlViewController:UICollectionViewDataSource,UICollectionViewDelegate
+{
+    
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
-        return self.assets.count
+        return self.datasource.count
     }
+    
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell
     {
-        let cell = (collectionView.dequeueReusableCellWithReuseIdentifier("LYLocalImageCollectionViewCell", forIndexPath: indexPath) as! LYLocalImageCollectionViewCell)
         
-//        let myAsset = self.assets[indexPath.item]
-//        
-//        let image = UIImage(CGImage:myAsset.thumbnail().takeUnretainedValue())
+        let cell = (collectionView.dequeueReusableCellWithReuseIdentifier("CustomCollectionViewCell", forIndexPath: indexPath) as! CustomCollectionViewCell)
         
-        
-        //获取原图
-        let representation =  self.assets[indexPath.item].defaultRepresentation()
-        
-        let imageBuffer = UnsafeMutablePointer<UInt8>.alloc(Int(representation.size()))
-        let bufferSize = representation.getBytes(imageBuffer, fromOffset: Int64(0),
-                                                 length: Int(representation.size()), error: nil)
-        let data =  NSData(bytesNoCopy:imageBuffer ,length:bufferSize, freeWhenDone:true)
-        cell.imgView.image = UIImage(data: data)
+        cell.refreshCellWithModle(self.datasource[indexPath.row])
         
         return cell
+    }
     
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath)
+    {
+        
+        print((collectionView.cellForItemAtIndexPath(indexPath)?.frame.size)!)  
+        
+        self.delegate?.clickItem((collectionView.cellForItemAtIndexPath(indexPath)?.frame.size)!,model:self.datasource[indexPath.row])
+        
+        
     }
 
+    
+    
+}
 
-
+extension BeautyGirlViewController:WaterfallLayoutdelegate
+{
+    
+    func waterlayout(layout:WaterfallLayout,index:NSInteger,itemWidth:CGFloat) -> CGFloat
+    {
+        
+        
+        let model = self.datasource[index]
+        
+        return  itemWidth*model.h/model.w
+        
+    }
+    
 }

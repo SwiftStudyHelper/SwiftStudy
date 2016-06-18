@@ -92,7 +92,11 @@ class LYHomePageViewController: UIViewController{
         //相册
         self.photoVc = BeautyGirlViewController()
         
-        self.photoVc?.creatUI()
+        self.photoVc?.delegate = self
+        
+        self.photoVc?.createUI()
+        
+        self.photoVc?.setData()
         
         newsScrollView?.addSubview((self.photoVc?.collectionView)!)
 
@@ -155,7 +159,27 @@ extension LYHomePageViewController:NaviBarViewDelegate
     {
         let offset:CGFloat = CGFloat(btn.tag-1000)
         
-       self.newsScrollView?.setContentOffset(CGPointMake(offset*SCREEN_W, 0), animated: true)
+        self.newsScrollView?.setContentOffset(CGPointMake(offset*SCREEN_W, 0), animated: true)
+        
+        
+    }
+
+
+}
+
+extension LYHomePageViewController:BeautyGirlViewControllerDelegate
+{
+    func clickItem(size:CGSize,model:CellModel)
+    {
+        
+        let vc = FullImageViewController()
+    
+        vc.startSize = size
+        
+        vc.model = model
+        
+        self.presentViewController(vc, animated: false, completion: nil)
+        
         
         
     }
