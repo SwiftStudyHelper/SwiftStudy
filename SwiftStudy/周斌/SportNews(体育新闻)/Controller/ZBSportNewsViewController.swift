@@ -119,18 +119,21 @@ class ZBSportNewsViewController: UIViewController {
         
     }
     
-    // 底部刷新
+    // 底部加载
     func footerRefresh(){
         
-        if num > 10 {
+        
+        if num >= 10 {
             
             page += 1
             
             creatGet()
             
         }else{
-        
-        tableView?.tableFooterView
+                    
+            footer.endRefreshingWithNoMoreData()
+            
+            
         }
         
 
@@ -151,7 +154,7 @@ extension ZBSportNewsViewController:UITableViewDelegate,UITableViewDataSource
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
 //        return 10
-        return (nsMuArray.count)
+        return nsMuArray.count
 
     }
     

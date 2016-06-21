@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A240E8E1D17DC2100BC116D /* AppleNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A240E8D1D17DC2100BC116D /* AppleNewsViewController.swift */; };
+		2A240E911D17DC4800BC116D /* AppNewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A240E8F1D17DC4800BC116D /* AppNewsTableViewCell.swift */; };
+		2A240E921D17DC4800BC116D /* AppNewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A240E901D17DC4800BC116D /* AppNewsTableViewCell.xib */; };
+		2A240E941D17DC7700BC116D /* AppleNewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A240E931D17DC7700BC116D /* AppleNewsModel.swift */; };
 		2A661EAD1D12546600707ED3 /* ZBSportNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A661EAC1D12546600707ED3 /* ZBSportNewsViewController.swift */; };
 		2A661EAF1D1254A900707ED3 /* ZBSportNewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A661EAE1D1254A900707ED3 /* ZBSportNewsModel.swift */; };
 		2A661EB21D12562A00707ED3 /* ZBSportNewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A661EB01D12562A00707ED3 /* ZBSportNewsTableViewCell.swift */; };
@@ -70,6 +74,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A240E8D1D17DC2100BC116D /* AppleNewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleNewsViewController.swift; sourceTree = "<group>"; };
+		2A240E8F1D17DC4800BC116D /* AppNewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppNewsTableViewCell.swift; sourceTree = "<group>"; };
+		2A240E901D17DC4800BC116D /* AppNewsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppNewsTableViewCell.xib; sourceTree = "<group>"; };
+		2A240E931D17DC7700BC116D /* AppleNewsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleNewsModel.swift; sourceTree = "<group>"; };
 		2A3811861D10F6BE0096BEAE /* icon_kehulianxiren.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_kehulianxiren.png; sourceTree = "<group>"; };
 		2A3811871D10F6BE0096BEAE /* icon_qiye.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_qiye.png; sourceTree = "<group>"; };
 		2A3811881D10F6BE0096BEAE /* icon_qunzu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_qunzu.png; sourceTree = "<group>"; };
@@ -87,7 +95,7 @@
 		2A661EAE1D1254A900707ED3 /* ZBSportNewsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZBSportNewsModel.swift; sourceTree = "<group>"; };
 		2A661EB01D12562A00707ED3 /* ZBSportNewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZBSportNewsTableViewCell.swift; sourceTree = "<group>"; };
 		2A661EB11D12562A00707ED3 /* ZBSportNewsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZBSportNewsTableViewCell.xib; sourceTree = "<group>"; };
-		2A661EB41D125DBB00707ED3 /* ZBSportContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZBSportContentViewController.swift; sourceTree = "<group>"; };
+		2A661EB41D125DBB00707ED3 /* ZBSportContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZBSportContentViewController.swift; path = "SportNews(体育新闻)/Controller/ZBSportContentViewController.swift"; sourceTree = "<group>"; };
 		2A6FC4FE1D15395300FADCDA /* ChangeMoneyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeMoneyViewController.swift; sourceTree = "<group>"; };
 		4F94FF96E56C33A795A1BD67 /* Pods_SwiftStudy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftStudy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		730EEBD61D0F9007008A5992 /* CalculateTimeHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculateTimeHelper.swift; sourceTree = "<group>"; };
@@ -206,7 +214,6 @@
 			children = (
 				2A6E47B31D12529B00009612 /* Controller */,
 				2A6E47B41D12529B00009612 /* Model */,
-				2A6E47B51D12529B00009612 /* Other */,
 				2A6E47B61D12529B00009612 /* View */,
 			);
 			path = "AppleNews(苹果新闻)";
@@ -215,6 +222,7 @@
 		2A6E47B31D12529B00009612 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				2A240E8D1D17DC2100BC116D /* AppleNewsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -222,6 +230,7 @@
 		2A6E47B41D12529B00009612 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2A240E931D17DC7700BC116D /* AppleNewsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -230,12 +239,15 @@
 			isa = PBXGroup;
 			children = (
 			);
-			path = Other;
+			name = Other;
+			path = "AppleNews(苹果新闻)/Other";
 			sourceTree = "<group>";
 		};
 		2A6E47B61D12529B00009612 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2A240E8F1D17DC4800BC116D /* AppNewsTableViewCell.swift */,
+				2A240E901D17DC4800BC116D /* AppNewsTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -451,7 +463,6 @@
 			isa = PBXGroup;
 			children = (
 				2A661EAC1D12546600707ED3 /* ZBSportNewsViewController.swift */,
-				2A661EB41D125DBB00707ED3 /* ZBSportContentViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -650,6 +661,9 @@
 		B69B2E3F1D07A3B400FF4DA0 /* 周斌 */ = {
 			isa = PBXGroup;
 			children = (
+				2A661EB41D125DBB00707ED3 /* ZBSportContentViewController.swift */,
+				2A3A68481D0F8FFE008FEEE9 /* ZBFrisfController(首页) */,
+				2A6E47B51D12529B00009612 /* Other */,
 				2A6E47B21D12529B00009612 /* AppleNews(苹果新闻) */,
 				2A6E47B71D12529B00009612 /* ChangeMoney(汇率转换) */,
 				2A6E47BC1D12529B00009612 /* HealthNews(健康资讯) */,
@@ -657,7 +671,6 @@
 				2A6E47C61D12529B00009612 /* SearchCourier(快递) */,
 				2A6E47CB1D12529B00009612 /* SearchIllegal(违章查询) */,
 				2A6E47D01D12529B00009612 /* SportNews(体育新闻) */,
-				2A3A68481D0F8FFE008FEEE9 /* ZBFrisfController(首页) */,
 			);
 			path = "周斌";
 			sourceTree = "<group>";
@@ -792,6 +805,7 @@
 				737AE7341D10001A00B6C721 /* w5.png in Resources */,
 				B65AD6241D027348006F3C81 /* Assets.xcassets in Resources */,
 				B65AD6221D027348006F3C81 /* Main.storyboard in Resources */,
+				2A240E921D17DC4800BC116D /* AppNewsTableViewCell.xib in Resources */,
 				B6C8CD5A1D0EAF0C00D41900 /* NewsCommTableViewCell.xib in Resources */,
 				737AE7301D10001A00B6C721 /* w1.png in Resources */,
 				737AE7361D10001A00B6C721 /* w7.png in Resources */,
@@ -868,6 +882,7 @@
 				B6C469A31D0FD07F005E9AE6 /* BeautyGirlViewController.swift in Sources */,
 				B6C8CD5D1D0EB72600D41900 /* NewsWebViewController.swift in Sources */,
 				2A661EAD1D12546600707ED3 /* ZBSportNewsViewController.swift in Sources */,
+				2A240E8E1D17DC2100BC116D /* AppleNewsViewController.swift in Sources */,
 				737AE7161D0FB0A800B6C721 /* TXWeatherDetailCell.swift in Sources */,
 				733F52981D0E9BC5006F9669 /* TXHomePageViewController.swift in Sources */,
 				B62665CE1D0E4440002C7176 /* URLFile.swift in Sources */,
@@ -878,7 +893,9 @@
 				B65AD6321D0289DF006F3C81 /* TabBarController.swift in Sources */,
 				B6D18AFB1D10E2BB00705E87 /* JokeTableViewCell.swift in Sources */,
 				B65AD61D1D027348006F3C81 /* AppDelegate.swift in Sources */,
+				2A240E911D17DC4800BC116D /* AppNewsTableViewCell.swift in Sources */,
 				B6D18B011D10E9BE00705E87 /* JokeModel.swift in Sources */,
+				2A240E941D17DC7700BC116D /* AppleNewsModel.swift in Sources */,
 				739A8E9C1D07F21100CA9E04 /* AMFHelper.swift in Sources */,
 				B6225B651D13F51B00325417 /* CellModel.swift in Sources */,
 				B6D18AFF1D10E63600705E87 /* JokeViewController.swift in Sources */,

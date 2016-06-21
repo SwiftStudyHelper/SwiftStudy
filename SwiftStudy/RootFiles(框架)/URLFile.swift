@@ -17,4 +17,6 @@ import Foundation
     let ZBSportNewsUrl = "http://apis.baidu.com/txapi/tiyu/tiyu"
 
     let ZBChangeMoneyUrl = "http://apis.baidu.com/apistore/currencyservice/type"
+
+    let ZBAppleNewsUrl = "http://apis.baidu.com/txapi/apple/apple"
         

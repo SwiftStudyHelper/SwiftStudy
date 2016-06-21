@@ -165,6 +165,10 @@ extension ZBHomePageViewController:buttonTableViewDelegate
         }
         if(btnName .isEqualToString("苹果新闻")){
             
+            let zbAppleNews = AppleNewsViewController()
+            
+            self.navigationController?.pushViewController(zbAppleNews, animated: true)
+            
             print("苹果新闻")
             
         }
