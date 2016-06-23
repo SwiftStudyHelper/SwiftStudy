@@ -7,30 +7,42 @@
 //
 
 import UIKit
-
 import SwiftyJSON
 
 class TXHomePageViewController: UIViewController ,UITableViewDelegate,UITableViewDataSource{
 
+    var weather:String?
+    var location:String?
+    var temper:String?
+    var fl:String?
+    var airQlty:String?
+    var windDir:String?
+    var myTableView:UITableView?
+    
+    
     // 123
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.weather = ""
+        
         self.view.backgroundColor = UIColor.brownColor()
         
-        let item = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Refresh, target: self, action: nil)
+        let item = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Refresh, target: self, action:#selector(TXHomePageViewController.getDataFromNetWork))
+        
+    
         
         self.navigationItem.rightBarButtonItem = item
      
-        var myTableView = UITableView(frame: CGRectMake(0, 0, SCREEN_W, SCREEN_H - 64), style:UITableViewStyle.Grouped)
+        self.myTableView = UITableView(frame: CGRectMake(0, 0, SCREEN_W, SCREEN_H - 64), style:UITableViewStyle.Grouped)
         
-        self.view.addSubview(myTableView)
+        self.view.addSubview(self.myTableView!)
         
-        myTableView.delegate = self
+        self.myTableView!.delegate = self
         
-        myTableView.dataSource = self
+        self.myTableView!.dataSource = self
         
-        self.getDataFromNetWork()
+       // self.getDataFromNetWork()
         
 //        myTableView.backgroundColor = UIColor.whiteColor()
         
@@ -40,13 +52,27 @@ class TXHomePageViewController: UIViewController ,UITableViewDelegate,UITableVie
     
     func getDataFromNetWork()
     {
-        let dic:Dictionary<String,AnyObject>  = ["city":"西安"]
+        let dic:Dictionary<String,AnyObject>  = ["city":"北京"]
         
         AMFHelper .BaiduGet(baiduWeatherUrl, parameters: dic, success: { (responseObject) in
             
 //            print(responseObject)
-            let dic = JSON(responseObject)
-            print(dic["HeWeather data service 3.0"][0]["aqi"]["city"]["qlty"])
+//            let dic = JSON(responseObject)
+//            
+//            print(dic["HeWeather data service 3.0"][0])
+//            self.weather = dic["HeWeather data service 3.0"][0]["now"]["cond"]["txt"].string
+//            self.temper = dic["HeWeather data service 3.0"][0]["now"]["tmp"].string
+//            self.location = dic["HeWeather data service 3.0"][0]["basic"]["city"].string
+//            self.fl = dic["HeWeather data service 3.0"][0]["now"]["fl"].string
+//            self.airQlty = dic["HeWeather data service 3.0"][0]["aqi"]["city"]["qlty"].string
+//            self.windDir = dic["HeWeather data service 3.0"][0]["now"]["wind"]["dir"].string
+//            
+//            
+//            
+//            
+//            
+//            self.myTableView?.reloadData()
+    
             
         }) { (error) in
             
@@ -81,6 +107,11 @@ class TXHomePageViewController: UIViewController ,UITableViewDelegate,UITableVie
         
         var cell = TXWeatherDetailCell()
         cell.selectionStyle = UITableViewCellSelectionStyle.None
+        cell.city.text = self.location
+        cell.tmp.text = self.temper?.stringByAppendingString("℃")
+        cell.fl.text = self.fl?.stringByAppendingString("℃")
+        cell.airQlty.text = self.airQlty
+        cell.windDir.text = self.windDir
         return cell
         
     }

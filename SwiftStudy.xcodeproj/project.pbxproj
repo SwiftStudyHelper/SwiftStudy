@@ -41,7 +41,7 @@
 		739A8E9C1D07F21100CA9E04 /* AMFHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739A8E9B1D07F21100CA9E04 /* AMFHelper.swift */; };
 		73EDA7AA1D11596A00D6C345 /* FirstTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A38119C1D1109980096BEAE /* FirstTableViewCell.swift */; };
 		73EDA7AB1D11597200D6C345 /* DailyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5F878D1D10E3E8007B3980 /* DailyTableViewCell.swift */; };
-		863DA56FE6DE748CBC3E1D49 /* Pods_SwiftStudy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F94FF96E56C33A795A1BD67 /* Pods_SwiftStudy.framework */; };
+		863DA56FE6DE748CBC3E1D49 /* Pods_SwiftStudy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F94FF96E56C33A795A1BD67 /* Pods_SwiftStudy.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		B6225B631D13F4DB00325417 /* WaterfallLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6225B621D13F4DB00325417 /* WaterfallLayout.swift */; };
 		B6225B651D13F51B00325417 /* CellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6225B641D13F51B00325417 /* CellModel.swift */; };
 		B6225B671D13F52A00325417 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6225B661D13F52A00325417 /* CustomCollectionViewCell.swift */; };
@@ -56,8 +56,6 @@
 		B65AD6271D027348006F3C81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B65AD6251D027348006F3C81 /* LaunchScreen.storyboard */; };
 		B65AD6321D0289DF006F3C81 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65AD6311D0289DF006F3C81 /* TabBarController.swift */; };
 		B65AD6391D02AC3E006F3C81 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65AD6381D02AC3E006F3C81 /* File.swift */; };
-		B65CF3641D112620009DEF1B /* ButtonMyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65CF3621D112620009DEF1B /* ButtonMyTableViewCell.swift */; };
-		B65CF3671D112684009DEF1B /* MyCustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65CF3661D112684009DEF1B /* MyCustomButton.swift */; };
 		B69B2E441D07A43F00FF4DA0 /* ZKQHomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69B2E431D07A43F00FF4DA0 /* ZKQHomePageViewController.swift */; };
 		B6C469A31D0FD07F005E9AE6 /* BeautyGirlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C469A21D0FD07F005E9AE6 /* BeautyGirlViewController.swift */; };
 		B6C8CD561D0E9CAA00D41900 /* HLModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C8CD551D0E9CAA00D41900 /* HLModel.swift */; };
@@ -105,6 +103,7 @@
 		737AE72E1D10001A00B6C721 /* w8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = w8.png; sourceTree = "<group>"; };
 		7382EFBF1D0E53AC0090B268 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		739A8E9B1D07F21100CA9E04 /* AMFHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AMFHelper.swift; sourceTree = "<group>"; };
+		73E81D231D14FAEC00083C7A /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../Library/Developer/Xcode/DerivedData/SwiftStudy-ehkcruuggewbyrfokvrkvgzbqvjq/Build/Products/Debug-iphoneos/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
 		B1392EC2F48A340864244681 /* Pods-SwiftStudy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftStudy.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftStudy/Pods-SwiftStudy.release.xcconfig"; sourceTree = "<group>"; };
 		B6225B621D13F4DB00325417 /* WaterfallLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaterfallLayout.swift; sourceTree = "<group>"; };
 		B6225B641D13F51B00325417 /* CellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellModel.swift; sourceTree = "<group>"; };
@@ -122,9 +121,6 @@
 		B65AD6281D027348006F3C81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B65AD6311D0289DF006F3C81 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		B65AD6381D02AC3E006F3C81 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
-		B65CF3621D112620009DEF1B /* ButtonMyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonMyTableViewCell.swift; sourceTree = "<group>"; };
-		B65CF3631D112620009DEF1B /* ButtonMyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonMyTableViewCell.xib; sourceTree = "<group>"; };
-		B65CF3661D112684009DEF1B /* MyCustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCustomButton.swift; sourceTree = "<group>"; };
 		B69B2E431D07A43F00FF4DA0 /* ZKQHomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZKQHomePageViewController.swift; sourceTree = "<group>"; };
 		B6C469A21D0FD07F005E9AE6 /* BeautyGirlViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeautyGirlViewController.swift; sourceTree = "<group>"; };
 		B6C8CD551D0E9CAA00D41900 /* HLModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HLModel.swift; sourceTree = "<group>"; };
@@ -694,6 +690,7 @@
 		D62B055CF3675F10E0636000 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				73E81D231D14FAEC00083C7A /* Alamofire.framework */,
 				4F94FF96E56C33A795A1BD67 /* Pods_SwiftStudy.framework */,
 			);
 			name = Frameworks;
@@ -769,7 +766,6 @@
 				730E2E5A1D1237CB00E90C91 /* icon_xiangmu2.png in Resources */,
 				730E2E531D12377A00E90C91 /* DailyTableViewCell.xib in Resources */,
 				730E2E541D12377A00E90C91 /* FirstTableViewCell.xib in Resources */,
-				730E2E551D12377A00E90C91 /* ButtonMyTableViewCell.xib in Resources */,
 				B6225B691D13F54000325417 /* CustomCollectionViewCell.xib in Resources */,
 				730E2E511D12374100E90C91 /* JokeTableViewCell.xib in Resources */,
 				737AE7371D10001A00B6C721 /* w8.png in Resources */,
@@ -993,7 +989,7 @@
 				GCC_PREFIX_HEADER = "/Users/liyang/Desktop/SwiftStudy/SwiftStudy/RootFiles(框架)/PrefixHeader.pch";
 				INFOPLIST_FILE = SwiftStudy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = L2Cplat.SwiftStudy;
+				PRODUCT_BUNDLE_IDENTIFIER = L2Cplat.SwiftStudy.liyang;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "";
@@ -1010,7 +1006,7 @@
 				GCC_PREFIX_HEADER = "/Users/liyang/Desktop/SwiftStudy/SwiftStudy/RootFiles(框架)/PrefixHeader.pch";
 				INFOPLIST_FILE = SwiftStudy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = L2Cplat.SwiftStudy;
+				PRODUCT_BUNDLE_IDENTIFIER = L2Cplat.SwiftStudy.liyang;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
