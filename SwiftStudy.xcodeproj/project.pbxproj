@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A240E8E1D17DC2100BC116D /* AppleNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A240E8D1D17DC2100BC116D /* AppleNewsViewController.swift */; };
+		2A240E911D17DC4800BC116D /* AppNewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A240E8F1D17DC4800BC116D /* AppNewsTableViewCell.swift */; };
+		2A240E921D17DC4800BC116D /* AppNewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A240E901D17DC4800BC116D /* AppNewsTableViewCell.xib */; };
+		2A240E941D17DC7700BC116D /* AppleNewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A240E931D17DC7700BC116D /* AppleNewsModel.swift */; };
 		2A661EAD1D12546600707ED3 /* ZBSportNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A661EAC1D12546600707ED3 /* ZBSportNewsViewController.swift */; };
 		2A661EAF1D1254A900707ED3 /* ZBSportNewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A661EAE1D1254A900707ED3 /* ZBSportNewsModel.swift */; };
 		2A661EB21D12562A00707ED3 /* ZBSportNewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A661EB01D12562A00707ED3 /* ZBSportNewsTableViewCell.swift */; };
@@ -14,6 +18,7 @@
 		2A661EB51D125DBB00707ED3 /* ZBSportContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A661EB41D125DBB00707ED3 /* ZBSportContentViewController.swift */; };
 		2A6E47A81D123FD800009612 /* ZhoubinJokeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3811A81D112A350096BEAE /* ZhoubinJokeTableViewCell.swift */; };
 		2A6E47A91D123FF000009612 /* ZhoubinJokeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A3811A91D112A350096BEAE /* ZhoubinJokeTableViewCell.xib */; };
+		2A6FC4FF1D15395300FADCDA /* ChangeMoneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6FC4FE1D15395300FADCDA /* ChangeMoneyViewController.swift */; };
 		730E2E511D12374100E90C91 /* JokeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6D18AFA1D10E2BB00705E87 /* JokeTableViewCell.xib */; };
 		730E2E531D12377A00E90C91 /* DailyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A5F878E1D10E3E8007B3980 /* DailyTableViewCell.xib */; };
 		730E2E541D12377A00E90C91 /* FirstTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A38119D1D1109980096BEAE /* FirstTableViewCell.xib */; };
@@ -56,6 +61,10 @@
 		B65AD6271D027348006F3C81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B65AD6251D027348006F3C81 /* LaunchScreen.storyboard */; };
 		B65AD6321D0289DF006F3C81 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65AD6311D0289DF006F3C81 /* TabBarController.swift */; };
 		B65AD6391D02AC3E006F3C81 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65AD6381D02AC3E006F3C81 /* File.swift */; };
+<<<<<<< HEAD
+=======
+		B65EDCF61D14D8330033C39C /* FullImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65EDCF51D14D8330033C39C /* FullImageViewController.swift */; };
+>>>>>>> 619816cb03f69c510e4b3f99b416e1a4dff00300
 		B69B2E441D07A43F00FF4DA0 /* ZKQHomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69B2E431D07A43F00FF4DA0 /* ZKQHomePageViewController.swift */; };
 		B6C469A31D0FD07F005E9AE6 /* BeautyGirlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C469A21D0FD07F005E9AE6 /* BeautyGirlViewController.swift */; };
 		B6C8CD561D0E9CAA00D41900 /* HLModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C8CD551D0E9CAA00D41900 /* HLModel.swift */; };
@@ -68,6 +77,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A240E8D1D17DC2100BC116D /* AppleNewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleNewsViewController.swift; sourceTree = "<group>"; };
+		2A240E8F1D17DC4800BC116D /* AppNewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppNewsTableViewCell.swift; sourceTree = "<group>"; };
+		2A240E901D17DC4800BC116D /* AppNewsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppNewsTableViewCell.xib; sourceTree = "<group>"; };
+		2A240E931D17DC7700BC116D /* AppleNewsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleNewsModel.swift; sourceTree = "<group>"; };
 		2A3811861D10F6BE0096BEAE /* icon_kehulianxiren.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_kehulianxiren.png; sourceTree = "<group>"; };
 		2A3811871D10F6BE0096BEAE /* icon_qiye.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_qiye.png; sourceTree = "<group>"; };
 		2A3811881D10F6BE0096BEAE /* icon_qunzu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_qunzu.png; sourceTree = "<group>"; };
@@ -85,7 +98,8 @@
 		2A661EAE1D1254A900707ED3 /* ZBSportNewsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZBSportNewsModel.swift; sourceTree = "<group>"; };
 		2A661EB01D12562A00707ED3 /* ZBSportNewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZBSportNewsTableViewCell.swift; sourceTree = "<group>"; };
 		2A661EB11D12562A00707ED3 /* ZBSportNewsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZBSportNewsTableViewCell.xib; sourceTree = "<group>"; };
-		2A661EB41D125DBB00707ED3 /* ZBSportContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZBSportContentViewController.swift; sourceTree = "<group>"; };
+		2A661EB41D125DBB00707ED3 /* ZBSportContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZBSportContentViewController.swift; path = "SportNews(体育新闻)/Controller/ZBSportContentViewController.swift"; sourceTree = "<group>"; };
+		2A6FC4FE1D15395300FADCDA /* ChangeMoneyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeMoneyViewController.swift; sourceTree = "<group>"; };
 		4F94FF96E56C33A795A1BD67 /* Pods_SwiftStudy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftStudy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		730EEBD61D0F9007008A5992 /* CalculateTimeHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculateTimeHelper.swift; sourceTree = "<group>"; };
 		733F52971D0E9BC5006F9669 /* TXHomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TXHomePageViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +135,10 @@
 		B65AD6281D027348006F3C81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B65AD6311D0289DF006F3C81 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		B65AD6381D02AC3E006F3C81 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+<<<<<<< HEAD
+=======
+		B65EDCF51D14D8330033C39C /* FullImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullImageViewController.swift; sourceTree = "<group>"; };
+>>>>>>> 619816cb03f69c510e4b3f99b416e1a4dff00300
 		B69B2E431D07A43F00FF4DA0 /* ZKQHomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZKQHomePageViewController.swift; sourceTree = "<group>"; };
 		B6C469A21D0FD07F005E9AE6 /* BeautyGirlViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeautyGirlViewController.swift; sourceTree = "<group>"; };
 		B6C8CD551D0E9CAA00D41900 /* HLModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HLModel.swift; sourceTree = "<group>"; };
@@ -203,7 +221,6 @@
 			children = (
 				2A6E47B31D12529B00009612 /* Controller */,
 				2A6E47B41D12529B00009612 /* Model */,
-				2A6E47B51D12529B00009612 /* Other */,
 				2A6E47B61D12529B00009612 /* View */,
 			);
 			path = "AppleNews(苹果新闻)";
@@ -212,6 +229,7 @@
 		2A6E47B31D12529B00009612 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				2A240E8D1D17DC2100BC116D /* AppleNewsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -219,6 +237,7 @@
 		2A6E47B41D12529B00009612 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2A240E931D17DC7700BC116D /* AppleNewsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -227,12 +246,15 @@
 			isa = PBXGroup;
 			children = (
 			);
-			path = Other;
+			name = Other;
+			path = "AppleNews(苹果新闻)/Other";
 			sourceTree = "<group>";
 		};
 		2A6E47B61D12529B00009612 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2A240E8F1D17DC4800BC116D /* AppNewsTableViewCell.swift */,
+				2A240E901D17DC4800BC116D /* AppNewsTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -251,6 +273,7 @@
 		2A6E47B81D12529B00009612 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				2A6FC4FE1D15395300FADCDA /* ChangeMoneyViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -447,7 +470,6 @@
 			isa = PBXGroup;
 			children = (
 				2A661EAC1D12546600707ED3 /* ZBSportNewsViewController.swift */,
-				2A661EB41D125DBB00707ED3 /* ZBSportContentViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -635,9 +657,20 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		B65EDCF21D14D1BA0033C39C /* fullImageView */ = {
+			isa = PBXGroup;
+			children = (
+				B65EDCF51D14D8330033C39C /* FullImageViewController.swift */,
+			);
+			path = fullImageView;
+			sourceTree = "<group>";
+		};
 		B69B2E3F1D07A3B400FF4DA0 /* 周斌 */ = {
 			isa = PBXGroup;
 			children = (
+				2A661EB41D125DBB00707ED3 /* ZBSportContentViewController.swift */,
+				2A3A68481D0F8FFE008FEEE9 /* ZBFrisfController(首页) */,
+				2A6E47B51D12529B00009612 /* Other */,
 				2A6E47B21D12529B00009612 /* AppleNews(苹果新闻) */,
 				2A6E47B71D12529B00009612 /* ChangeMoney(汇率转换) */,
 				2A6E47BC1D12529B00009612 /* HealthNews(健康资讯) */,
@@ -645,7 +678,6 @@
 				2A6E47C61D12529B00009612 /* SearchCourier(快递) */,
 				2A6E47CB1D12529B00009612 /* SearchIllegal(违章查询) */,
 				2A6E47D01D12529B00009612 /* SportNews(体育新闻) */,
-				2A3A68481D0F8FFE008FEEE9 /* ZBFrisfController(首页) */,
 			);
 			path = "周斌";
 			sourceTree = "<group>";
@@ -653,6 +685,7 @@
 		B69B2E401D07A3C600FF4DA0 /* 李阳 */ = {
 			isa = PBXGroup;
 			children = (
+				B65EDCF21D14D1BA0033C39C /* fullImageView */,
 				B6C8CD5B1D0EB70400D41900 /* webViewController(通用新闻详情) */,
 				B62665D91D0E6713002C7176 /* News（首页） */,
 			);
@@ -780,6 +813,7 @@
 				737AE7341D10001A00B6C721 /* w5.png in Resources */,
 				B65AD6241D027348006F3C81 /* Assets.xcassets in Resources */,
 				B65AD6221D027348006F3C81 /* Main.storyboard in Resources */,
+				2A240E921D17DC4800BC116D /* AppNewsTableViewCell.xib in Resources */,
 				B6C8CD5A1D0EAF0C00D41900 /* NewsCommTableViewCell.xib in Resources */,
 				737AE7301D10001A00B6C721 /* w1.png in Resources */,
 				737AE7361D10001A00B6C721 /* w7.png in Resources */,
@@ -842,6 +876,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A6E47A81D123FD800009612 /* ZhoubinJokeTableViewCell.swift in Sources */,
+				B65EDCF61D14D8330033C39C /* FullImageViewController.swift in Sources */,
 				73EDA7AB1D11597200D6C345 /* DailyTableViewCell.swift in Sources */,
 				73EDA7AA1D11596A00D6C345 /* FirstTableViewCell.swift in Sources */,
 				7361F7001D10DB29006840E6 /* ZBHomePageViewController.swift in Sources */,
@@ -855,16 +890,20 @@
 				B6C469A31D0FD07F005E9AE6 /* BeautyGirlViewController.swift in Sources */,
 				B6C8CD5D1D0EB72600D41900 /* NewsWebViewController.swift in Sources */,
 				2A661EAD1D12546600707ED3 /* ZBSportNewsViewController.swift in Sources */,
+				2A240E8E1D17DC2100BC116D /* AppleNewsViewController.swift in Sources */,
 				737AE7161D0FB0A800B6C721 /* TXWeatherDetailCell.swift in Sources */,
 				733F52981D0E9BC5006F9669 /* TXHomePageViewController.swift in Sources */,
 				B62665CE1D0E4440002C7176 /* URLFile.swift in Sources */,
 				B6225B631D13F4DB00325417 /* WaterfallLayout.swift in Sources */,
+				2A6FC4FF1D15395300FADCDA /* ChangeMoneyViewController.swift in Sources */,
 				B69B2E441D07A43F00FF4DA0 /* ZKQHomePageViewController.swift in Sources */,
 				7382EFC01D0E53AC0090B268 /* Model.swift in Sources */,
 				B65AD6321D0289DF006F3C81 /* TabBarController.swift in Sources */,
 				B6D18AFB1D10E2BB00705E87 /* JokeTableViewCell.swift in Sources */,
 				B65AD61D1D027348006F3C81 /* AppDelegate.swift in Sources */,
+				2A240E911D17DC4800BC116D /* AppNewsTableViewCell.swift in Sources */,
 				B6D18B011D10E9BE00705E87 /* JokeModel.swift in Sources */,
+				2A240E941D17DC7700BC116D /* AppleNewsModel.swift in Sources */,
 				739A8E9C1D07F21100CA9E04 /* AMFHelper.swift in Sources */,
 				B6225B651D13F51B00325417 /* CellModel.swift in Sources */,
 				B6D18AFF1D10E63600705E87 /* JokeViewController.swift in Sources */,

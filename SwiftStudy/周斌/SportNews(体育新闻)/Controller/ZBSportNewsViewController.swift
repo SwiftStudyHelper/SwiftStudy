@@ -8,24 +8,20 @@
 
 import UIKit
 import SwiftyJSON
-
-//protocol ZBSportNewsDelegate:NSObjectProtocol {
-//    
-//    func clickTheCellWithIndexPath(url:String)
-//    
-//}
-
-
+import MJRefresh
 
 class ZBSportNewsViewController: UIViewController {
     
-    var num:NSNumber = 10
+    var num:Int = 10
     
-    var page:NSNumber = 1
+    var page:Int = 1
     
     var tableView:UITableView?
     
-//    weak var delegate: ZBSportNewsDelegate?
+    // 顶部刷新
+    let header = MJRefreshNormalHeader()
+    // 底部刷新
+    let footer = MJRefreshAutoNormalFooter()
     
     var nsMuArray:Array<ZBSportNewsModel> = []
     
@@ -51,7 +47,17 @@ class ZBSportNewsViewController: UIViewController {
         
          tableView!.dataSource = self
         
-         self.view.addSubview(tableView!)
+        // 下拉刷新
+        header.setRefreshingTarget(self, refreshingAction: #selector(headerRefresh))
+       
+        self.tableView!.mj_header = header
+        
+        // 上拉刷新
+        footer.setRefreshingTarget(self, refreshingAction: #selector(footerRefresh))
+        
+        self.tableView!.mj_footer = footer
+        
+        self.view.addSubview(tableView!)
         
     }
     
@@ -61,7 +67,7 @@ class ZBSportNewsViewController: UIViewController {
         
         AMFHelper .BaiduGet(baiduNewsTouTiaoUrl, parameters: dic, success: { (responseObject) in
             
-            print(responseObject)
+            print(dic)
             
             let result = JSON(responseObject)
             
@@ -81,18 +87,10 @@ class ZBSportNewsViewController: UIViewController {
             }
             
             dispatch_async(dispatch_get_main_queue(), {
+
+                self.tableView!.mj_header.endRefreshing()
                 
-//                if self.page == 1
-//                {
-//                    self.HeadlineTableView!.mj_header.endRefreshing()
-//                    
-//                }
-//                else
-//                {
-//                    
-//                    self.HeadlineTableView!.mj_footer.endRefreshing()
-//                    
-//                }
+                self.tableView!.mj_footer.endRefreshing()
                 
                 self.tableView!.reloadData()
                 
@@ -107,6 +105,41 @@ class ZBSportNewsViewController: UIViewController {
 
     
     }
+    
+    // 顶部刷新
+    func headerRefresh(){
+        print("下拉刷新")
+        // 结束刷新
+        self.page = 1
+        
+        self.nsMuArray.removeAll()
+        
+        self.creatGet()
+        
+        
+    }
+    
+    // 底部加载
+    func footerRefresh(){
+        
+        
+        if num >= 10 {
+            
+            page += 1
+            
+            creatGet()
+            
+        }else{
+                    
+            footer.endRefreshingWithNoMoreData()
+            
+            
+        }
+        
+
+
+    }
+
 
 }
 extension ZBSportNewsViewController:UITableViewDelegate,UITableViewDataSource
@@ -121,7 +154,7 @@ extension ZBSportNewsViewController:UITableViewDelegate,UITableViewDataSource
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
 //        return 10
-        return (nsMuArray.count)
+        return nsMuArray.count
 
     }
     

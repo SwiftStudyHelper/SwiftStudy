@@ -1,6 +1,13 @@
 import UIKit
 import Photos
 
+protocol BeautyGirlViewControllerDelegate :NSObjectProtocol{
+    
+    func clickItem(size:CGSize,model:CellModel)
+    
+}
+
+
 class BeautyGirlViewController:UIViewController {
     
     var collectionView:UICollectionView?
@@ -13,13 +20,11 @@ class BeautyGirlViewController:UIViewController {
     
     var datasource = [CellModel]()
     
+    weak var delegate:BeautyGirlViewControllerDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        createUI() //初始化界面
-//        
-//        
-//        setData() //初始化数据
         
     }
     
@@ -99,6 +104,8 @@ class BeautyGirlViewController:UIViewController {
         
         collectionView?.dataSource = self
         
+        collectionView?.delegate = self
+        
         layout!.columnCount = 3
         
         layout!.columnMargin = 10
@@ -118,7 +125,7 @@ class BeautyGirlViewController:UIViewController {
     
 }
 
-extension BeautyGirlViewController:UICollectionViewDataSource
+extension BeautyGirlViewController:UICollectionViewDataSource,UICollectionViewDelegate
 {
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
@@ -136,6 +143,17 @@ extension BeautyGirlViewController:UICollectionViewDataSource
         
         return cell
     }
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath)
+    {
+        
+        print((collectionView.cellForItemAtIndexPath(indexPath)?.frame.size)!)  
+        
+        self.delegate?.clickItem((collectionView.cellForItemAtIndexPath(indexPath)?.frame.size)!,model:self.datasource[indexPath.row])
+        
+        
+    }
+
     
     
 }

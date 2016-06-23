@@ -148,7 +148,7 @@ extension ZBHomePageViewController:buttonTableViewDelegate
         }
         if(btnName .isEqualToString("体育新闻")){
             
-        let zbsport = ZBSportNewsViewController() as UIViewController
+        let zbsport = ZBSportNewsViewController()
             
         self.navigationController?.pushViewController(zbsport, animated: true)
             
@@ -165,6 +165,10 @@ extension ZBHomePageViewController:buttonTableViewDelegate
         }
         if(btnName .isEqualToString("苹果新闻")){
             
+            let zbAppleNews = AppleNewsViewController()
+            
+            self.navigationController?.pushViewController(zbAppleNews, animated: true)
+            
             print("苹果新闻")
             
         }
@@ -175,7 +179,9 @@ extension ZBHomePageViewController:buttonTableViewDelegate
         }
         if(btnName .isEqualToString("汇率转换")){
             
-            print("汇率转换")
+            let zbchange = ChangeMoneyViewController()
+            
+            self.navigationController?.pushViewController(zbchange, animated: true)
             
         }
         

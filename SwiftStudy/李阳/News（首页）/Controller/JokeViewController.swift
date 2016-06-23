@@ -79,6 +79,7 @@ class JokeViewController: UIViewController {
                 {
                     self.tableView!.mj_header.endRefreshing()
                     
+                    
                 }
                 else
                 {
